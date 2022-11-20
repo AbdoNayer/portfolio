@@ -1,0 +1,15 @@
+// Dir LTR
+
+html[dir=ltr] {
+    body{
+        direction: ltr;
+    }
+}
+
+// Dir RTL
+
+html[dir=rtl] {
+    body{
+        direction: rtl;
+    }
+}

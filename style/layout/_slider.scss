@@ -1,0 +1,12 @@
+//  Slider Owl
+
+.owl-carousel{
+    display: block;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    direction: ltr;
+    .owl-nav{
+        display: none;
+    }
+}

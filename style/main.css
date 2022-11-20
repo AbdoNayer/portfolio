@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+.owl-carousel {
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  direction: ltr;
+}
+.owl-carousel .owl-nav {
+  display: none;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Cairo", sans-serif;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+i {
+  vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.scrollContain {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  contain: size style layout;
+}
+
+.block {
+  border: 1px solid #DDD;
+  height: 100px;
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.row {
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: initial;
+  justify-content: initial;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+html[dir=ltr] body {
+  direction: ltr;
+}
+
+html[dir=rtl] body {
+  direction: rtl;
+}/*# sourceMappingURL=main.css.map */

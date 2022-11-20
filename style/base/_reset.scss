@@ -1,0 +1,72 @@
+// Font Import Cdn
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+// Mixin
+// @use '/style/abstracts/mixins' as *;
+
+// Colors
+// @use '/style/abstracts/variables' as *;
+
+// Local Style Page
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Cairo', sans-serif;
+}
+
+a, button, input, textarea, i{
+    // @include transition(0.5s);
+}
+
+img{
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+i{
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 10px 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    display: inline-block;
+}
+
+// Style Scroll Site
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrollContain{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+}

@@ -1,0 +1,56 @@
+// // Style Button Site
+
+// button{
+//     background-color: transparent;
+//     border: 0;
+//   }
+  
+//   .btnDefault{
+//     background: $mainColor !important;
+//     color: #fff !important;
+//     border: 1px solid $mainColor !important;
+//   }
+  
+//   .btnWhite{
+//     background: #fff !important;
+//     color: $mainColor !important;
+//     border: 1px solid #fff !important;
+//   }
+  
+//   .btnBorderMain{
+//     background: transparent !important;
+//     color: #fff !important;
+//     border: 1px solid $mainColor !important;
+//   }
+  
+//   .bt-button{
+//     cursor: pointer;
+//     border-radius: 3px;
+//     height: 40px;
+//     line-height: 40px;
+//     width: 150px;
+//     text-align: center;
+//     overflow: hidden;
+//     position: relative;
+//     &:before{
+//       content: "";
+//       @include absoluteItem(0px, 0px, false);
+//       @include transition;
+//       width: 100%;
+//       height: 100%;
+//       background-color: $mainColor;
+//       z-index: -1;
+//       transform: translateX(-100%);
+//       opacity: 0;
+//       visibility: hidden;
+//     }
+//     &:hover:before{
+//       transform: translateX(0%);
+//       opacity: 1;
+//       visibility: initial;
+//     }
+//     &:hover{
+//       background-color: transparent !important;
+//       color: #FFF !important;
+//     }
+//   }
