@@ -1,9 +1,21 @@
+@use '../abstracts/mixins' as *;
+
+@media (min-width: 320px) {
+    .row{
+        @include gridSystem('sm');
+    }
+}
+
 @media (min-width: 768px) {
-    
+    .row{
+        @include gridSystem('md');
+    }
 }
 
 @media (min-width: 1200px) {
-    
+    .row{
+        @include gridSystem('lg');
+    }
 }
 
 

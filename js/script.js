@@ -2,17 +2,8 @@
 
 $(window).on('load', function () {
 
-    // Color Theme Page
-    let valColor    = localStorage.getItem('valColor');
-    let root        = document.querySelector(':root');
-    if(valColor){
-        root.style.setProperty('--mainColor', valColor);
-    }else{
-        root.style.setProperty('--mainColor', '#0E77FF');
-    }
-
     // Mixitup
-    var mixer = mixitup('.container-item');
+    // var mixer = mixitup('.container-item');
 
     // Set Lang On Page Load
     const lang = localStorage.getItem("langPage");
@@ -53,15 +44,6 @@ $(document).ready(function () {
         }
     });
 
-    // Click Add class Link
-    $(document).on("click", ".header ul li",function(e) {
-        e.preventDefault()
-        $(this).addClass('active').siblings().removeClass('active');
-        const marker            = document.querySelector(".header ul .marker");
-        marker.style.left       = e.target.offsetLeft  - 10     + "px";
-        marker.style.width      = e.target.offsetWidth + 20     + "px";
-    });
-
     // Scroll For Section
     $(document).on("click", ".header ul li a",function(e) {
         $('html, body').animate({
@@ -79,16 +61,7 @@ $(document).ready(function () {
     $(document).on("click", ".click-nav",function() {
         $(".handle").toggleClass("closed bgDefault");
         $(".click-nav").toggleClass("m-0");
-        $(".head-links").toggleClass("back");
-        
-    });
-
-    // Change Color Theme
-    $(document).on("click", ".theme-color button",function() {
-        let root = document.querySelector(':root');
-        root.style.setProperty('--mainColor', $(this).data('color'));
-        localStorage.setItem('valColor',  $(this).data('color'));
-        $('.theme-color').toggleClass('back')
+        $(".list-item").toggleClass("back");
     });
     
     // Change Lang
@@ -96,11 +69,6 @@ $(document).ready(function () {
         location.reload();
         const LangVal   = document.getElementsByClassName("btn-lang").value;
         localStorage.setItem("langPage", LangVal);
-    });
-    
-    // Click Setting Color Page
-    $(document).on("click", ".btn-setting",function() {
-        $('.theme-color').toggleClass('back')
     });
 
     // Slider Owl

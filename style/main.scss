@@ -1,5 +1,6 @@
 // Abstracts
 @use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
 @use 'abstracts/mixins' as *;
 
 // Layout
@@ -10,6 +11,7 @@
 
 // Components
 @use 'components/buttons' as *;
+@use 'components/iconNav' as *;
 @use 'components/loader' as *;
 @use 'components/social' as *;
 

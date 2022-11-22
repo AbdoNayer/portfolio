@@ -1,3 +1,5 @@
+@use './functions' as *;
+
 // Font Family
 @mixin fontFamily($size, $name){
     font: $size 'Poppins', $name;
@@ -28,4 +30,17 @@
     justify-content: $content;
     flex-direction: $direction;
     flex-wrap: $wrap;
+}
+
+// Grid System
+
+@mixin gridSystem($device){
+    .col#{grid-class-name-generic($device)}{
+        flex: 1;
+    }
+    @for $size from 1 through 12 {
+        .col#{grid-class-name($device, $size)}{
+            width: $size / 12 * 100%;
+        }
+    }
 }
