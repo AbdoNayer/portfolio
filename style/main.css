@@ -717,16 +717,6 @@ html[dir=ltr] .theme {
   margin: auto;
 }
 @media (max-width: 1060px) {
-  html[dir=ltr] .none {
-    display: block;
-  }
-  html[dir=ltr] .click-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: initial;
-  }
   html[dir=ltr] header .head-nav nav {
     position: fixed;
     top: 0;
@@ -769,31 +759,33 @@ html[dir=rtl] .theme {
   right: initial;
   margin: auto;
 }
-html[dir=rtl] header .head-nav nav {
-  position: fixed;
-  top: 0;
-  bottom: initial;
-  transform: translateX(100%);
-  left: initial;
-  right: 0;
-  margin: auto;
-}
-html[dir=rtl] header .head-nav nav ul li::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  bottom: initial;
-  transform: initial;
-  left: initial;
-  right: 0px;
-  margin: auto;
-}
-html[dir=rtl] header .head-nav nav ul li.active::after, html[dir=rtl] header .head-nav nav ul li:hover::after {
-  position: absolute;
-  top: 33px;
-  bottom: initial;
-  transform: rotate(40deg);
-  left: initial;
-  right: 10px;
-  margin: auto;
+@media (max-width: 1060px) {
+  html[dir=rtl] header .head-nav nav {
+    position: fixed;
+    top: 0;
+    bottom: initial;
+    transform: translateX(100%);
+    left: initial;
+    right: 0;
+    margin: auto;
+  }
+  html[dir=rtl] header .head-nav nav ul li::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    bottom: initial;
+    transform: initial;
+    left: initial;
+    right: 0px;
+    margin: auto;
+  }
+  html[dir=rtl] header .head-nav nav ul li.active::after, html[dir=rtl] header .head-nav nav ul li:hover::after {
+    position: absolute;
+    top: 33px;
+    bottom: initial;
+    transform: rotate(40deg);
+    left: initial;
+    right: 10px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

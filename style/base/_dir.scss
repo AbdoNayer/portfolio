@@ -15,17 +15,6 @@ html[dir=ltr] {
     }
 
     @media (max-width: 1060px) {
-
-        // Class Important
-        .none{
-            display: block
-        }
-    
-        // Style Click Nav
-        .click-nav {
-            @include flexItem(flex, center, center, column, initial);
-        }
-        
         // Header
         header{
             .head-nav{
@@ -65,20 +54,22 @@ html[dir=rtl] {
         @include positionItem(fixed, initial, 20px, 20px, initial, initial);
     }
 
-    // Header
-    header{
-        .head-nav{
-            nav{
-                @include positionItem(fixed, 0, initial, initial, 0, translateX(100%));
-                ul{
-                    li{
-                        &::after{
-                            content: "";
-                            @include positionItem(absolute, 18px, initial, initial, 0px, initial);
-                        }
-                        &.active, &:hover{
+    @media (max-width: 1060px) {
+        // Header
+        header{
+            .head-nav{
+                nav{
+                    @include positionItem(fixed, 0, initial, initial, 0, translateX(100%));
+                    ul{
+                        li{
                             &::after{
-                                @include positionItem(absolute, 33px, initial, initial, 10px, rotate(40deg));
+                                content: "";
+                                @include positionItem(absolute, 18px, initial, initial, 0px, initial);
+                            }
+                            &.active, &:hover{
+                                &::after{
+                                    @include positionItem(absolute, 33px, initial, initial, 10px, rotate(40deg));
+                                }
                             }
                         }
                     }
