@@ -1,15 +1,90 @@
+@use '../abstracts/mixins' as *;
+
 // Dir LTR
 
 html[dir=ltr] {
+
+    // Body App
     body{
         direction: ltr;
     }
+
+    // Theme App
+    .theme{
+        @include positionItem(fixed, initial, 20px, initial, 20px, initial);
+    }
+
+    @media (max-width: 1060px) {
+
+        // Class Important
+        .none{
+            display: block
+        }
+    
+        // Style Click Nav
+        .click-nav {
+            @include flexItem(flex, center, center, column, initial);
+        }
+        
+        // Header
+        header{
+            .head-nav{
+                nav{
+                    @include positionItem(fixed, 0, initial, 0, initial, translateX(-100%));
+                    ul{
+                        li{
+                            &::after{
+                                content: "";
+                                @include positionItem(absolute, 18px, initial, 0, initial, initial);
+                            }
+                            &.active, &:hover{
+                                &::after{
+                                    @include positionItem(absolute, 33px, initial, 0, initial, rotate(40deg));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // Dir RTL
 
 html[dir=rtl] {
+
+    // Body App
     body{
         direction: rtl;
     }
+
+    // Theme App
+    .theme{
+        @include positionItem(fixed, initial, 20px, 20px, initial, initial);
+    }
+
+    // Header
+    header{
+        .head-nav{
+            nav{
+                @include positionItem(fixed, 0, initial, initial, 0, translateX(100%));
+                ul{
+                    li{
+                        &::after{
+                            content: "";
+                            @include positionItem(absolute, 18px, initial, initial, 0px, initial);
+                        }
+                        &.active, &:hover{
+                            &::after{
+                                @include positionItem(absolute, 33px, initial, initial, 10px, rotate(40deg));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

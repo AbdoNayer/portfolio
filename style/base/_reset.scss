@@ -3,8 +3,6 @@
 
 // Mixin
 @import '../abstracts/mixins';
-
-// Colors
 @import '../abstracts/variables';
 
 // Local Style Page
@@ -23,6 +21,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Cairo', sans-serif;
+    height: 10000px;
 }
 
 a, button, input, textarea, i{
@@ -66,6 +65,14 @@ li{
 
 // Class Important
 
+.colorMain{
+    color: $mainColor;
+}
+
+.back{
+    transform: translate(0) !important;
+}
+
 .container{
     max-width: 1320px;
     margin: auto;
@@ -76,10 +83,17 @@ li{
     @include flexItem(flex, initial, initial, row, wrap);
 }
 
-.scrollContain{
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    will-change: scroll-position;
-    contain: size style layout;
+.none{
+    display: none;
+}
+
+.owl-carousel{
+    display: block;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    direction: ltr;
+    .owl-nav{
+        display: none;
+    }
 }

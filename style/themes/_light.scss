@@ -1,11 +1,86 @@
-// selection
+@use '../abstracts/variables' as *;
 
-// ::selection {
-//     background: $mainColor;
-//     color: #fff;
-// }
-  
-// ::-moz-selection {
-//     background: $mainColor;
-//     color: #fff;
-// }
+html[theme=light] {
+
+    body{
+        background-color: $whiteColor;
+    }
+
+    // Selection App
+    ::selection {
+        background: $mainColor;
+        color: $mainColor;
+    }
+    ::-moz-selection {
+        background: $mainColor;
+        color: $mainColor;
+    }
+
+    // For App LgihtMode
+    a{
+        color: $secondColor;
+    }
+    h1, h2, h3, h4, h5, h6, p{
+        color: $secondColor;
+    }
+
+    // Classes Used
+    .colorSecond{
+        color: $secondColor;
+    }
+    .bgSection{
+        background-color: $bgLightColor;
+    }
+
+    // Style Click Nav
+    .click-nav {
+        .handle {
+            background-color: $secondColor;
+        }
+    }
+
+    // BTN
+    .btnSecond{
+        background: $secondColor !important;
+        color: $whiteColor !important;
+        border: 1px solid $secondColor !important;
+    }
+    .btnBorder{
+        background: transparent !important;
+        color: $secondColor !important;
+        border: 1px solid $secondColor !important;
+    }
+    .bt-button{
+        &:before{
+          background-color: $whiteColor;
+        }
+        &::after{
+          background-color: $whiteColor;
+        }
+    }
+
+    // Theme Section
+    .theme{
+        button{
+            background-color: $whiteColor;
+            i{
+                color: $secondColor;
+            }
+        }
+    }
+
+    // Header
+    header{
+        .head-nav{
+            background-color: $whiteColor;
+            nav{
+                background-color: $whiteColor;
+                li{
+                    &::after{
+                        background-color: $secondColor;
+                    }
+                }
+            }
+        }
+    }
+}

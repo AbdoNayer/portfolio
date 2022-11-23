@@ -1,56 +1,44 @@
-// // Style Button Site
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
-// button{
-//     background-color: transparent;
-//     border: 0;
-//   }
+// Style Button Site
+
+button{
+    background-color: transparent;
+    border: 0;
+}
   
-//   .btnDefault{
-//     background: $mainColor !important;
-//     color: #fff !important;
-//     border: 1px solid $mainColor !important;
-//   }
+.btnMain{
+    background: $mainColor !important;
+    color: $whiteColor !important;
+    border: 1px solid $mainColor !important;
+}
   
-//   .btnWhite{
-//     background: #fff !important;
-//     color: $mainColor !important;
-//     border: 1px solid #fff !important;
-//   }
-  
-//   .btnBorderMain{
-//     background: transparent !important;
-//     color: #fff !important;
-//     border: 1px solid $mainColor !important;
-//   }
-  
-//   .bt-button{
-//     cursor: pointer;
-//     border-radius: 3px;
-//     height: 40px;
-//     line-height: 40px;
-//     width: 150px;
-//     text-align: center;
-//     overflow: hidden;
-//     position: relative;
-//     &:before{
-//       content: "";
-//       @include absoluteItem(0px, 0px, false);
-//       @include transition;
-//       width: 100%;
-//       height: 100%;
-//       background-color: $mainColor;
-//       z-index: -1;
-//       transform: translateX(-100%);
-//       opacity: 0;
-//       visibility: hidden;
-//     }
-//     &:hover:before{
-//       transform: translateX(0%);
-//       opacity: 1;
-//       visibility: initial;
-//     }
-//     &:hover{
-//       background-color: transparent !important;
-//       color: #FFF !important;
-//     }
-//   }
+.bt-button{
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 150px;
+    position: relative;
+    font-size: 18px;
+    &:before{
+      content: "";
+      height: 3px;
+      width: 20px;
+      @include positionItem(absolute, -1px, initial, initial, 22px, initial);
+      z-index: 2;
+    }
+    &::after{
+      content: "";
+      height: 3px;
+      width: 20px;
+      @include positionItem(absolute, initial, -1px, 22px, initial, initial);
+      z-index: 2;
+    }
+    &:hover{
+      transform: scale(0.9);
+    }
+}

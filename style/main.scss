@@ -3,17 +3,9 @@
 @use 'abstracts/functions' as *;
 @use 'abstracts/mixins' as *;
 
-// Layout
-@use 'layout/header' as *;
-@use 'layout/footer' as *;
-@use 'layout/forms' as *;
-@use 'layout/slider' as *;
-
 // Components
 @use 'components/buttons' as *;
-@use 'components/iconNav' as *;
 @use 'components/loader' as *;
-@use 'components/social' as *;
 
 // Themes
 @use 'themes/dark' as *;

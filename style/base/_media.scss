@@ -1,5 +1,7 @@
 @use '../abstracts/mixins' as *;
 
+// Media Grid
+
 @media (min-width: 320px) {
     .row{
         @include gridSystem('sm');
@@ -15,6 +17,59 @@
 @media (min-width: 1200px) {
     .row{
         @include gridSystem('lg');
+    }
+}
+
+// Media App
+
+@media (max-width: 1060px) {
+
+    // Class Important
+    .none{
+        display: block
+    }
+
+    // Style Click Nav
+    .click-nav {
+        @include flexItem(flex, center, center, column, initial);
+    }
+    
+    // Header
+    header{
+        .head-nav{
+            padding: 15px 25px;
+            nav{
+                @include positionItem(fixed, 0, initial, initial, 0, translateX(100%));
+                height: 100%;
+                width: 300px;
+                z-index: 999;
+                padding: 30px 10px;
+                @include transition(0.5s);
+                overflow-x: hidden;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+                will-change: scroll-position;
+                contain: size style layout;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                ul{
+                    @include flexItem(flex, initial, initial, column, initial);
+                    li{
+                        a{
+                            padding: 20px 25px;
+                        }
+                        &::after{
+                            content: "";
+                            @include positionItem(absolute, 18px, initial, initial, 0px, initial);
+                        }
+                        &.active, &:hover{
+                            &::after{
+                                @include positionItem(absolute, 33px, initial, initial, 10px, rotate(40deg));
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
