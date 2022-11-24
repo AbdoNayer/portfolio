@@ -189,7 +189,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Cairo", sans-serif;
-  height: 10000px;
 }
 
 a, button, input, textarea, i {
@@ -234,7 +233,7 @@ li {
 }
 
 .colorMain {
-  color: #356DFF;
+  color: #356DFF !important;
 }
 
 .back {
@@ -247,12 +246,20 @@ li {
   padding: 0 20px;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .row {
   display: flex;
   align-items: initial;
   justify-content: initial;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .none {
@@ -325,6 +332,38 @@ li {
   }
   to {
     transform: translateY(0%);
+  }
+}
+@-webkit-keyframes textIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes textIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes animatedText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes animatedText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 .click-nav {
@@ -514,6 +553,156 @@ header.header-fixed {
           animation: slideDown 0.7s;
 }
 
+.content-view {
+  width: 100%;
+  position: relative;
+  padding-top: 280px;
+}
+.content-view .head-title {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+}
+.content-view .head-title .info-me {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: row;
+  flex-wrap: initial;
+  -webkit-animation: showTopText 1s;
+          animation: showTopText 1s;
+}
+.content-view .head-title .info-me h1 {
+  margin: 0;
+  font-size: 50px;
+}
+.content-view .head-title .info-me h1:last-child {
+  margin: 0 10px;
+}
+.content-view .head-title h2 {
+  margin: 0;
+  -webkit-animation: showTopText 2s;
+          animation: showTopText 2s;
+}
+.content-view .head-title p {
+  -webkit-animation: showBottomText 2s;
+          animation: showBottomText 2s;
+}
+.content-view .head-title hr {
+  height: 1px;
+  background-color: #DDD;
+  margin: 20px 0;
+  -webkit-animation: animatedText 1s;
+          animation: animatedText 1s;
+}
+.content-view .shape-anime img {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 500px;
+  z-index: 99;
+}
+.content-view .shape-anime .shape {
+  background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  -webkit-animation: morph 4s ease-in-out infinite;
+          animation: morph 4s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 500px;
+  transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  width: 500px;
+  z-index: 5;
+  margin: auto;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@-webkit-keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+}
+
+@-webkit-keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 @media (min-width: 320px) {
   .row .col-sm {
     flex: 1;

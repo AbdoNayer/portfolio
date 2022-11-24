@@ -21,8 +21,8 @@ $(window).on('load', function () {
         valName(`welcome`,                          `اهلا بكم ف الموقع الشخصي`);
         valName(`me`,                               `انا`);
         valName(`myName`,                           `عبدالوهاب نير`);
+        valName(`myWork`,                           `فرونت إند ديفلوبر`);
         valName(`desMe`,                            `خبره ف مجال البرمجه منذ ٦ سنوات ف المواقع والتطبيقات`);
-        valName(`category`,                         `الاقسام`);
     }else {
         // valName(`logo`,                             `Sh3wiZo`);
         valName(`home`,                             `Home`);
@@ -35,7 +35,7 @@ $(window).on('load', function () {
         valName(`welcome`,                          `Welcome to the personal website`);
         valName(`me`,                               `I Am`);
         valName(`myName`,                           `AbdElwahab Nayer`);
+        valName(`myWork`,                           `Front-End Developer`);
         valName(`desMe`,                            `6 years of experience in programming in websites and applications`);
-        valName(`category`,                         `category`);
     }
 });

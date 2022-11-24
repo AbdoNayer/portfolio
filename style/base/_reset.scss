@@ -21,7 +21,6 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Cairo', sans-serif;
-    height: 10000px;
 }
 
 a, button, input, textarea, i{
@@ -66,7 +65,7 @@ li{
 // Class Important
 
 .colorMain{
-    color: $mainColor;
+    color: $mainColor !important;
 }
 
 .back{
@@ -79,8 +78,16 @@ li{
     padding: 0 20px;
 }
 
+.position-relative{
+    position: relative;
+}
+
 .row{
     @include flexItem(flex, initial, initial, row, wrap);
+}
+
+.overflow-hidden{
+    overflow: hidden;
 }
 
 .none{

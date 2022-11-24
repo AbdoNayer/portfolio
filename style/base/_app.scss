@@ -130,4 +130,100 @@ header{
     }
 }
 
-  
+// Content View
+.content-view{
+    width: 100%;
+    position: relative;
+    padding-top: 280px;
+    .head-title{
+        @include positionItem(absolute, 50%, initial, 0, 0, translateY(-50%));
+        overflow: hidden;
+        .info-me{
+            @include flexItem(flex, center, initial, row, initial);
+            // white-space: nowrap;
+            // overflow: hidden;
+            // animation: animatedText 1s linear 0.5s normal both;
+            animation: showTopText 1s;
+            h1{
+                margin: 0;
+                font-size: 50px;
+                &:last-child{
+                    margin: 0 10px;
+                }
+            }
+        }
+        h2{
+            margin: 0;
+            animation: showTopText 2s;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // animation: animatedText 2s linear 0.5s normal both;
+        }
+        p{
+            animation: showBottomText 2s;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // animation: animatedText 3s linear 0.5s normal both;
+        }
+        hr{
+            height: 1px;
+            background-color: #DDD;
+            margin: 20px 0;
+            animation: animatedText 1s;
+        }
+    }
+    .shape-anime{
+        img{
+            @include positionItem(absolute, 50%, initial, 0, 0, translateY(-50%));
+            max-width: 500px;
+            z-index: 99;
+        }
+        .shape {
+            background: linear-gradient(45deg, $mainColor 0%, $mainColor 100%);
+            animation: morph 4s ease-in-out infinite;
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            height: 500px;
+            @include transition(1s);
+            width: 500px;
+            z-index: 5;
+            margin: auto;
+            opacity: 0.2;
+            @include positionItem(absolute, 50%, initial, 0, 0, translateY(-50%));
+            @keyframes morph {
+                0% {
+                    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+                    background: linear-gradient(45deg, $mainColor 0%, $mainColor 100%);
+                }
+                50% {
+                    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+                    background: linear-gradient(45deg, $mainColor 0%, $mainColor 100%);
+                }
+                100% {
+                    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+                    background: linear-gradient(45deg, $mainColor 0%, $mainColor 100%);
+                }
+            }
+        }
+    }
+}
+
+@keyframes showTopText {
+    0% { 
+        transform: translate3d(0, 100%, 0); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes showBottomText {
+    0% { 
+        transform: translate3d(0, -100%, 0); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0, 0, 0); 
+        opacity: 1;
+    }
+}

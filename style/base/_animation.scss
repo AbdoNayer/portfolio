@@ -31,3 +31,24 @@
         transform: translateY(0%);
     }
 }
+
+// Text In
+@keyframes textIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+// Write Text
+
+@keyframes animatedText{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
