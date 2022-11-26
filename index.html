@@ -32,6 +32,11 @@
 </head>
 <body>
 
+    <!-- Loading App -->
+    <div class="loader">
+        <div class="loading"></div>
+    </div>
+
     <!-- Theme App -->
     <div class="theme">
         <button class="btn-theme" id="themeApp">
@@ -76,7 +81,9 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="shape-anime position-relative">
                         <div class="shape"></div>
-                        <img src="./images/02.png" alt="" class="position-relative">
+                        <div class="overflow-hidden">
+                            <img src="./images/05.png" alt="" class="position-relative">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 position-relative">
@@ -102,6 +109,31 @@
 
     <section>
 
+        <div class="container bg">
+            <div class="row">
+                
+                <div class="col-md-3 col-sm-12">
+
+                    <div class="svg-box"><span class="text">0%</span>
+                        <svg class="pie" viewbox="0 0 200 200" data-percent="67">
+                            <circle r="90" cx="100" cy="100"></circle>
+                            <circle class="bar" r="90" cx="100" cy="100"></circle>
+                        </svg>
+                    </div>
+
+                    <div class="svg-box"><span class="text">0%</span>
+                        <svg class="pie" viewbox="0 0 200 200" data-percent="30">
+                            <circle r="90" cx="100" cy="100"></circle>
+                            <circle class="bar" r="90" cx="100" cy="100"></circle>
+                        </svg>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+
     </section>
 
     <footer>
@@ -120,6 +152,68 @@
     <script src="./js/translate.js"></script>
     <!-- Plugin Text Animation -->
     <script src="./js/script.js"></script>
+
+    <script>
+
+        // const circleSection         = document.querySelector('.circles');
+        // const circles               = document.querySelector('.circle');
+        // const progressCircles       = document.querySelector('.progress');
+        // const progressText          = document.querySelector('.circles h1');
+
+        // const bol                   = false;
+
+        // window.addEventListener("scroll", function() {
+        //     for (let i; circles.lenght; i++){
+        //         let redius          = progressCircles[i].r.baseVal.value;
+        //         let circumference   = redius * 2 * Math.PI;
+        //         progressCircles[i].style.strokeDasharray = circumference;
+
+        //         function setProgress (precent) {
+        //             progressCircles[i].style.strokeDashoffset = circumference - ( precent / 100 ) * circumference;
+        //         }
+
+        //         const progress = circles[i].dataset.prog;
+
+        //         progressText[i].innerHTML = progress + '%';
+
+        //         setProgress(progress);
+
+        //         bol = true;
+
+        //     }
+        // });
+
+        (function() {
+
+            var bar, c, percent, r, range;
+
+            percent     = document.querySelector('.pie').dataset.percent;
+
+            bar         = document.querySelector('.pie .bar');
+
+            r           = parseFloat(bar.getAttribute("r"));
+
+            c           = Math.PI * (r * 2);
+
+            range = ((100 - percent) / 100) * c;
+
+            console.log('percent', percent)
+            console.log('bar', bar)
+            console.log('r', r)
+            console.log('c', c)
+            console.log('range', range)
+
+            bar.css({ 'stroke-dashoffset': c, 'stroke-dasharray': c });
+
+            bar.animate({ strokeDashoffset: range }, 1000, 'linear');
+
+            $('.text').prop('Counter', 0).animate({
+                Counter: percent
+            }, { duration: 1000, step: function(now) { return $(this).text(Math.ceil(now) + '%') } });
+
+            }).call(this);
+
+    </script>
     
 </body>
 </html>

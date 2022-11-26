@@ -33,7 +33,6 @@
 }
 
 // Write Text
-
 @keyframes animatedWidth{
     from{
         width: 0;
@@ -43,6 +42,7 @@
     }
 }
 
+// Translate3d Top
 @keyframes showTopText {
     0% { 
         transform: translate3d(0, 100%, 0); 
@@ -53,6 +53,8 @@
         opacity: 1;
     }
 }
+
+// Translate3d Bottom
 @keyframes showBottomText {
     0% { 
         transform: translate3d(0, -100%, 0); 
@@ -62,4 +64,11 @@
         transform: translate3d(0, 0, 0); 
         opacity: 1;
     }
+}
+
+// Loading
+@keyframes loader {
+    0% { left: 0; height: 30px; width: 15px }
+    50% { height: 8px; width: 40px }
+    100% { left: 235px; height: 30px; width: 15px}
 }

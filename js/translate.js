@@ -23,6 +23,7 @@ $(window).on('load', function () {
         valName(`myName`,                           `عبدالوهاب نير`);
         valName(`myWork`,                           `فرونت إند ديفلوبر`);
         valName(`desMe`,                            `خبره ف مجال البرمجه منذ ٦ سنوات ف المواقع والتطبيقات`);
+        valName(`loading`,                          `جاري التحميل ...`);
     }else {
         // valName(`logo`,                             `Sh3wiZo`);
         valName(`home`,                             `Home`);
@@ -37,5 +38,6 @@ $(window).on('load', function () {
         valName(`myName`,                           `AbdElwahab Nayer`);
         valName(`myWork`,                           `Front-End Developer`);
         valName(`desMe`,                            `6 years of experience in programming in websites and applications`);
+        valName(`loading`,                          `Loading ...`);
     }
 });
