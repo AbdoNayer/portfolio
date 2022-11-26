@@ -32,23 +32,34 @@
     }
 }
 
-// Text In
-@keyframes textIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
-}
-
 // Write Text
 
-@keyframes animatedText{
+@keyframes animatedWidth{
     from{
         width: 0;
     }
     to{
         width: 100%;
+    }
+}
+
+@keyframes showTopText {
+    0% { 
+        transform: translate3d(0, 100%, 0); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes showBottomText {
+    0% { 
+        transform: translate3d(0, -100%, 0); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0, 0, 0); 
+        opacity: 1;
     }
 }

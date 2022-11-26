@@ -8,7 +8,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 996px) {
     .row{
         @include gridSystem('md');
     }
@@ -68,6 +68,30 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // Content View
+    .content-view{
+        padding-top: 40px;
+        .head-title{
+            margin-top: 40px;
+            .info-me{
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+        .shape-anime{
+            text-align: center;
+            img{
+                max-width: 300px;
+                z-index: 99;
+            }
+            .shape {
+                height: 300px;
+                width: 300px;
             }
         }
     }
