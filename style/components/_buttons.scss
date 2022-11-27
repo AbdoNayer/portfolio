@@ -14,16 +14,16 @@ button{
     border: 1px solid $mainColor !important;
 }
   
-.bt-button{
+.btn-button{
     cursor: pointer;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 45px;
-    width: 150px;
+    width: 180px;
     position: relative;
-    font-size: 18px;
+    font-size: 15px;
     &:before{
       content: "";
       height: 3px;

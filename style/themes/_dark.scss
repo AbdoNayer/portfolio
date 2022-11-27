@@ -32,6 +32,9 @@ html[theme=dark] {
     .bgSection{
         background-color: $bgDarkColor;
     }
+    .bgToggle{
+        background-color: $secondColor;
+    }
 
     // Style Click Nav
     .click-nav {
@@ -51,7 +54,7 @@ html[theme=dark] {
         color: $whiteColor !important;
         border: 1px solid $whiteColor !important;
     }
-    .bt-button{
+    .btn-button{
         &:before{
           background-color: $secondColor;
         }
@@ -84,4 +87,41 @@ html[theme=dark] {
             }
         }
     }
+
+    // Count Section
+    .count-section{
+        .bgSection{
+            .count-box{
+                .svg-box {
+                    svg circle {
+                        stroke: $bgDarkColor;
+                    }
+                }      
+            }
+        }
+    }
+
+     // Head Title
+     .head-title{
+        &::after{
+            border-top: 15px solid $bgDarkColor;
+        }
+        &::before{
+            border-top: 15px solid $bgDarkColor;
+        }
+        &.bgToggle{
+            h4{
+                &::before, &::after{
+                    box-shadow: 0 -25px 0 0 $secondColor;
+                }
+            }
+            &::after{
+                border-top: 15px solid $secondColor;
+            }
+            &::before{
+                border-top: 15px solid $secondColor;
+            }
+        }
+    }
+
 }

@@ -105,12 +105,12 @@ $(document).ready(function () {
             $('.btn-theme').removeClass('dark');
         }
     });
-
-    // Slider Owl
-    $('#sliderOurClient').owlCarousel({
-        loop:true,
+    
+    // Slider Count
+    $('#sliderCount').owlCarousel({
+        loop:false,
         margin:5,
-        center:true,
+        center:false,
         autoplay:true,
         autoplayTimeout: 6000,
         smartSpeed: 1000,
@@ -127,10 +127,10 @@ $(document).ready(function () {
                 items:1
             },
             900:{
-                items:1
+                items:2
             },
             1000:{
-                items:1
+                items:4
             }
         }
     });

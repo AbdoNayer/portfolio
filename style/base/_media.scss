@@ -74,21 +74,27 @@
 
     // Content View
     .content-view{
-        padding-top: 40px;
+        padding-top: 0px;
+        padding-bottom: 50px;
+        text-align: center;
         .head-title{
             margin-top: 40px;
             .info-me{
+                @include flexItem(flex, center, center, row, initial);
                 h1{
                     font-size: 40px;
                 }
             }
+            .btn-button {
+                margin: 20px auto;
+            }
         }
         .shape-anime{
             text-align: center;
-            img{
-                max-width: 300px;
-                z-index: 99;
-            }
+            // img{
+            //     max-width: 300px;
+            //     z-index: 99;
+            // }
             .shape {
                 height: 300px;
                 width: 300px;
