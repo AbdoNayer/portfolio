@@ -106,21 +106,21 @@ $(document).ready(function () {
         }
     });
     
-    // Slider Count
-    $('#sliderCount').owlCarousel({
+    // Slider Skills
+    $('#sliderSkills').owlCarousel({
         loop:false,
         margin:5,
         center:false,
-        autoplay:true,
-        autoplayTimeout: 6000,
+        autoplay:false,
+        autoplayTimeout: 3000,
         smartSpeed: 1000,
         animateOut: 'fadeOut',
-        dragEndSpeed: 6000,
+        dragEndSpeed: 3000,
         pagination : false,
         nav:true,
         navText: [
-            '<i class="icon-arrow-left"></i>',
-            '<i class="icon-arrow-right"></i>'
+            '<i class="icon-arrow"></i>',
+            '<i class="icon-arrow"></i>'
         ],
         responsive:{
             0:{
@@ -131,6 +131,35 @@ $(document).ready(function () {
             },
             1000:{
                 items:4
+            }
+        }
+    });
+
+    // Slider Count
+    $('#sliderExperience').owlCarousel({
+        loop:false,
+        margin:5,
+        center:false,
+        autoplay:false,
+        autoplayTimeout: 3000,
+        smartSpeed: 1000,
+        animateOut: 'fadeOut',
+        dragEndSpeed: 3000,
+        pagination : false,
+        nav:true,
+        navText: [
+            '<i class="icon-arrow"></i>',
+            '<i class="icon-arrow"></i>'
+        ],
+        responsive:{
+            0:{
+                items:1
+            },
+            900:{
+                items:1
+            },
+            1000:{
+                items:2
             }
         }
     });

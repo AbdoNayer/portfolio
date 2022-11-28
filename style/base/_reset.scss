@@ -103,4 +103,24 @@ li{
     .owl-nav, .owl-dots{
         display: none;
     }
+    &.owl-switch {
+        .owl-nav{
+            @include flexItem(flex, center, space-between, row, wrap);
+            width: 100%;
+            button{
+                width: 40px;
+                height: 40px;
+                @include flexItem(flex, center, center, row, wrap);
+            }
+            .owl-prev{
+                @include positionItem(absolute, 20%, initial, -20px, initial, initial);
+                i{
+                    transform: rotate(180deg);
+                }
+            }
+            .owl-next{
+                @include positionItem(absolute, 20%, initial, initial, -20px, initial);
+            }
+        }
+    }
 }

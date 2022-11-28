@@ -34,6 +34,16 @@ html[theme=light] {
     .bgToggle{
         background-color: $whiteColor;
     }
+    .owl-switch {
+        .owl-nav{
+            button{
+                background-color: $whiteColor;
+                i{
+                    color: $secondColor;
+                }
+            }
+        }
+    }
 
     // Style Click Nav
     .click-nav {
@@ -102,10 +112,7 @@ html[theme=light] {
 
     // Head Title
     .head-title{
-        &::after{
-            border-top: 15px solid $bgLightColor;
-        }
-        &::before{
+        &::after, &::before{
             border-top: 15px solid $bgLightColor;
         }
         &.bgToggle{
@@ -129,6 +136,18 @@ html[theme=light] {
             img{
                 &:first-child{
                     opacity: 0.2;
+                }
+            }
+        }
+    }
+
+    // Section Experience
+    .section-experience{
+        .block-experience{
+            background-color: $whiteColor;
+            .icon-head{
+                &::after, &::before{
+                    border-top: 15px solid $bgLightColor;
                 }
             }
         }
