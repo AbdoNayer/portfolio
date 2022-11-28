@@ -43,7 +43,7 @@ html[dir=ltr] {
         .desc-about-me{
             ul{
                 &::after{
-                    @include positionItem(absolute, 50%, initial, 4px, initial, translateY(-50%));
+                    @include positionItem(absolute, 10px, initial, 4px, initial, initial);
                 }
                 li{
                     &::after{
@@ -75,7 +75,7 @@ html[dir=rtl] {
         .desc-about-me{
             ul{
                 &::after{
-                    @include positionItem(absolute, 50%, initial, initial, 4px, translateY(-50%));
+                    @include positionItem(absolute, 10px, initial, initial, 4px, initial);
                 }
                 li{
                     &::after{

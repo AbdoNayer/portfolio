@@ -326,6 +326,9 @@ html[theme=dark] .head-title.bgToggle::after {
 html[theme=dark] .head-title.bgToggle::before {
   border-top: 15px solid #0B0D39;
 }
+html[theme=dark] .section-about-me .img-about-me img:first-child {
+  opacity: 1;
+}
 
 html[theme=light] body {
   background-color: #FFF;
@@ -408,6 +411,9 @@ html[theme=light] .head-title.bgToggle::after {
 }
 html[theme=light] .head-title.bgToggle::before {
   border-top: 15px solid #FFF;
+}
+html[theme=light] .section-about-me .img-about-me img:first-child {
+  opacity: 0.2;
 }
 
 * {
@@ -494,7 +500,7 @@ li {
 }
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .none {
@@ -941,7 +947,7 @@ header.header-fixed {
 .section-about-me .desc-about-me ul::after {
   content: "";
   width: 2px;
-  height: 95%;
+  height: 93%;
   background-color: #356DFF;
 }
 .section-about-me .desc-about-me ul li {
@@ -962,6 +968,7 @@ header.header-fixed {
 .section-about-me .img-about-me {
   position: relative;
   overflow: hidden;
+  margin: 20px 0;
 }
 .section-about-me .img-about-me img {
   position: relative;
@@ -969,7 +976,6 @@ header.header-fixed {
 }
 .section-about-me .img-about-me img:first-child {
   position: absolute;
-  opacity: 0.2;
   max-width: 80%;
 }
 .section-about-me .img-about-me img:last-child {
@@ -1238,9 +1244,9 @@ html[dir=ltr] .theme {
 }
 html[dir=ltr] .section-about-me .desc-about-me ul::after {
   position: absolute;
-  top: 50%;
+  top: 10px;
   bottom: initial;
-  transform: translateY(-50%);
+  transform: initial;
   left: 4px;
   right: initial;
   margin: auto;
@@ -1269,9 +1275,9 @@ html[dir=rtl] .theme {
 }
 html[dir=rtl] .section-about-me .desc-about-me ul::after {
   position: absolute;
-  top: 50%;
+  top: 10px;
   bottom: initial;
-  transform: translateY(-50%);
+  transform: initial;
   left: initial;
   right: 4px;
   margin: auto;

@@ -123,4 +123,15 @@ html[theme=light] {
         }
     }
 
+    // Section About Me
+    .section-about-me{
+        .img-about-me{
+            img{
+                &:first-child{
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+
 }

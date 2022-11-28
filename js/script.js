@@ -81,7 +81,7 @@ $(document).ready(function () {
         $(".handle").toggleClass("closed");
         $("nav").toggleClass("back");
         $("nav li").toggleClass("animSlideIn");
-        $("body").css("overflow-y", "hidden");
+        $("body").toggleClass("overflow-hidden");
     });
     
     // Change Lang
