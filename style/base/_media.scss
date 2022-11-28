@@ -71,13 +71,13 @@
             }
         }
     }
-
+    
     // Content View
     .content-view{
         padding-top: 0px;
         padding-bottom: 50px;
         text-align: center;
-        .head-title{
+        .info-title{
             margin-top: 40px;
             .info-me{
                 @include flexItem(flex, center, center, row, initial);
@@ -101,6 +101,10 @@
             }
         }
     }
+}
+
+@media (max-width: 767px) {
+    
 }
 
 

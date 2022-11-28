@@ -309,4 +309,53 @@ header{
     }
 }
 
+// Section About Me
+.section-about-me{
+    padding-top: 80px;
+    margin: 20px 0;
+    .desc-about-me{
+        margin: 20px 0;
+        ul{
+            position: relative;
+            &::after{
+                content: "";
+                width: 2px;
+                height: 90%;
+                background-color: $mainColor;
+                @include positionItem(absolute, 50%, initial, initial, 4px, translateY(-50%));
+            }
+            li{
+                margin: 20px 0;
+                position: relative;
+                padding: 0 40px;
+                display: block;
+                &::after{
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background-color: $mainColor;
+                    @include positionItem(absolute, 50%, initial, initial, 0, translateY(-50%));
+                }
+                span{
+
+                }
+            }
+        }
+    }
+    .img-about-me{
+        position: relative;
+        overflow: hidden;
+        img{
+            position: relative;
+            &:first-child{
+                position: absolute;
+                opacity: 0.2;
+                max-width: 80%;
+            }
+            &:last-child{
+                z-index: 9;
+            }
+        }
+    }
+}
 

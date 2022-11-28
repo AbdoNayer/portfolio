@@ -41,7 +41,7 @@
     }
     @for $size from 1 through 12 {
         .col#{grid-class-name($device, $size)}{
-            width: $size / 12 * 100%;
+            width: ($size / 12) * 100%;
         }
     }
 }

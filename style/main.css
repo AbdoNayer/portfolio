@@ -262,7 +262,7 @@ html[theme=dark] ::-moz-selection {
 html[theme=dark] a {
   color: #FFF;
 }
-html[theme=dark] h1, html[theme=dark] h2, html[theme=dark] h3, html[theme=dark] h4, html[theme=dark] h5, html[theme=dark] h6, html[theme=dark] p {
+html[theme=dark] h1, html[theme=dark] h2, html[theme=dark] h3, html[theme=dark] h4, html[theme=dark] h5, html[theme=dark] h6, html[theme=dark] p, html[theme=dark] li {
   color: #FFF;
 }
 html[theme=dark] .colorSecond {
@@ -345,7 +345,7 @@ html[theme=light] ::-moz-selection {
 html[theme=light] a {
   color: #0B0D39;
 }
-html[theme=light] h1, html[theme=light] h2, html[theme=light] h3, html[theme=light] h4, html[theme=light] h5, html[theme=light] h6, html[theme=light] p {
+html[theme=light] h1, html[theme=light] h2, html[theme=light] h3, html[theme=light] h4, html[theme=light] h5, html[theme=light] h6, html[theme=light] p, html[theme=light] li {
   color: #0B0D39;
 }
 html[theme=light] .colorSecond {
@@ -928,6 +928,64 @@ header.header-fixed {
   stroke-linecap: round;
 }
 
+.section-about-me {
+  padding-top: 80px;
+  margin: 20px 0;
+}
+.section-about-me .desc-about-me {
+  margin: 20px 0;
+}
+.section-about-me .desc-about-me ul {
+  position: relative;
+}
+.section-about-me .desc-about-me ul::after {
+  content: "";
+  width: 2px;
+  height: 90%;
+  background-color: #356DFF;
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: 4px;
+  margin: auto;
+}
+.section-about-me .desc-about-me ul li {
+  margin: 20px 0;
+  position: relative;
+  padding: 0 40px;
+  display: block;
+}
+.section-about-me .desc-about-me ul li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #356DFF;
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: 0;
+  margin: auto;
+}
+.section-about-me .img-about-me {
+  position: relative;
+  overflow: hidden;
+}
+.section-about-me .img-about-me img {
+  position: relative;
+}
+.section-about-me .img-about-me img:first-child {
+  position: absolute;
+  opacity: 0.2;
+  max-width: 80%;
+}
+.section-about-me .img-about-me img:last-child {
+  z-index: 9;
+}
+
 @media (min-width: 320px) {
   .row .col-sm {
     flex: 1;
@@ -1122,20 +1180,20 @@ header.header-fixed {
     padding-bottom: 50px;
     text-align: center;
   }
-  .content-view .head-title {
+  .content-view .info-title {
     margin-top: 40px;
   }
-  .content-view .head-title .info-me {
+  .content-view .info-title .info-me {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     flex-wrap: initial;
   }
-  .content-view .head-title .info-me h1 {
+  .content-view .info-title .info-me h1 {
     font-size: 40px;
   }
-  .content-view .head-title .btn-button {
+  .content-view .info-title .btn-button {
     margin: 20px auto;
   }
   .content-view .shape-anime {
