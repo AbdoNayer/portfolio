@@ -82,7 +82,7 @@
             .info-me{
                 @include flexItem(flex, center, center, row, initial);
                 h1{
-                    font-size: 40px;
+                    font-size: 28px;
                 }
             }
             .btn-button {
@@ -91,10 +91,6 @@
         }
         .shape-anime{
             text-align: center;
-            // img{
-            //     max-width: 300px;
-            //     z-index: 99;
-            // }
             .shape {
                 height: 300px;
                 width: 300px;

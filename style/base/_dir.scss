@@ -38,6 +38,22 @@ html[dir=ltr] {
         }
     }
 
+    // Section About Me
+    .section-about-me{
+        .desc-about-me{
+            ul{
+                &::after{
+                    @include positionItem(absolute, 50%, initial, 4px, initial, translateY(-50%));
+                }
+                li{
+                    &::after{
+                        @include positionItem(absolute, 50%, initial, 0, initial, translateY(-50%));
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // Dir RTL
@@ -52,6 +68,22 @@ html[dir=rtl] {
     // Theme App
     .theme{
         @include positionItem(fixed, initial, 20px, 20px, initial, initial);
+    }
+
+    // Section About Me
+    .section-about-me{
+        .desc-about-me{
+            ul{
+                &::after{
+                    @include positionItem(absolute, 50%, initial, initial, 4px, translateY(-50%));
+                }
+                li{
+                    &::after{
+                        @include positionItem(absolute, 50%, initial, initial, 0, translateY(-50%));
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: 1060px) {

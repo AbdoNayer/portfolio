@@ -812,7 +812,7 @@ header.header-fixed {
   text-align: center;
 }
 .content-view .shape-anime img {
-  max-width: 500px;
+  max-width: 100%;
   z-index: 99;
   -webkit-animation: translate3DTop 1s;
           animation: translate3DTop 1s;
@@ -941,15 +941,8 @@ header.header-fixed {
 .section-about-me .desc-about-me ul::after {
   content: "";
   width: 2px;
-  height: 90%;
+  height: 95%;
   background-color: #356DFF;
-  position: absolute;
-  top: 50%;
-  bottom: initial;
-  transform: translateY(-50%);
-  left: initial;
-  right: 4px;
-  margin: auto;
 }
 .section-about-me .desc-about-me ul li {
   margin: 20px 0;
@@ -962,13 +955,9 @@ header.header-fixed {
   width: 10px;
   height: 10px;
   background-color: #356DFF;
-  position: absolute;
-  top: 50%;
-  bottom: initial;
-  transform: translateY(-50%);
-  left: initial;
-  right: 0;
-  margin: auto;
+}
+.section-about-me .desc-about-me ul li span {
+  font-weight: bold;
 }
 .section-about-me .img-about-me {
   position: relative;
@@ -976,6 +965,7 @@ header.header-fixed {
 }
 .section-about-me .img-about-me img {
   position: relative;
+  max-width: 100%;
 }
 .section-about-me .img-about-me img:first-child {
   position: absolute;
@@ -1191,7 +1181,7 @@ header.header-fixed {
     flex-wrap: initial;
   }
   .content-view .info-title .info-me h1 {
-    font-size: 40px;
+    font-size: 28px;
   }
   .content-view .info-title .btn-button {
     margin: 20px auto;
@@ -1246,6 +1236,24 @@ html[dir=ltr] .theme {
     margin: auto;
   }
 }
+html[dir=ltr] .section-about-me .desc-about-me ul::after {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: 4px;
+  right: initial;
+  margin: auto;
+}
+html[dir=ltr] .section-about-me .desc-about-me ul li::after {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: 0;
+  right: initial;
+  margin: auto;
+}
 
 html[dir=rtl] body {
   direction: rtl;
@@ -1257,6 +1265,24 @@ html[dir=rtl] .theme {
   transform: initial;
   left: 20px;
   right: initial;
+  margin: auto;
+}
+html[dir=rtl] .section-about-me .desc-about-me ul::after {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: 4px;
+  margin: auto;
+}
+html[dir=rtl] .section-about-me .desc-about-me ul li::after {
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: 0;
   margin: auto;
 }
 @media (max-width: 1060px) {

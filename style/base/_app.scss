@@ -219,7 +219,7 @@ header{
     .shape-anime{
         text-align: center;
         img{
-            max-width: 500px;
+            max-width: 100%;
             z-index: 99;
             animation: translate3DTop 1s;
         }
@@ -320,9 +320,8 @@ header{
             &::after{
                 content: "";
                 width: 2px;
-                height: 90%;
+                height: 95%;
                 background-color: $mainColor;
-                @include positionItem(absolute, 50%, initial, initial, 4px, translateY(-50%));
             }
             li{
                 margin: 20px 0;
@@ -334,10 +333,9 @@ header{
                     width: 10px;
                     height: 10px;
                     background-color: $mainColor;
-                    @include positionItem(absolute, 50%, initial, initial, 0, translateY(-50%));
                 }
                 span{
-
+                    font-weight: bold;
                 }
             }
         }
@@ -347,6 +345,7 @@ header{
         overflow: hidden;
         img{
             position: relative;
+            max-width: 100%;
             &:first-child{
                 position: absolute;
                 opacity: 0.2;
