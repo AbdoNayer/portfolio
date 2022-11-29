@@ -200,7 +200,7 @@ header{
             animation: translate3DRight 1.5s;
             h1{
                 margin: 0;
-                font-size: 50px;
+                font-size: 40px;
                 &:last-child{
                     margin: 0 10px;
                 }
@@ -418,3 +418,27 @@ header{
     }
 }
 
+// Section Projects
+.section-project{
+    padding-top: 80px;
+    margin: 20px 0;
+    position: relative;
+    .sliderProject{
+        .content{
+            .tilter__title{
+                direction: rtl;
+            }
+        }
+        .owl-prev {
+            top: 45% !important;
+            left: 0 !important;
+        }
+        .owl-next{
+            top: 45% !important;
+            right: 0 !important;
+        }
+        .owl-stage{
+            padding-bottom: 20px;
+        }
+    }
+}

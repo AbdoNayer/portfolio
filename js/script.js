@@ -135,7 +135,7 @@ $(document).ready(function () {
         }
     });
 
-    // Slider Count
+    // Slider Experience
     $('#sliderExperience').owlCarousel({
         loop:false,
         margin:5,
@@ -160,6 +160,35 @@ $(document).ready(function () {
             },
             1000:{
                 items:2
+            }
+        }
+    });
+
+    // Slider Project
+    $('#sliderProject').owlCarousel({
+        loop:false,
+        margin:5,
+        center:false,
+        autoplay:false,
+        autoplayTimeout: 3000,
+        smartSpeed: 1000,
+        animateOut: 'fadeOut',
+        dragEndSpeed: 3000,
+        pagination : false,
+        nav:true,
+        navText: [
+            '<i class="icon-arrow"></i>',
+            '<i class="icon-arrow"></i>'
+        ],
+        responsive:{
+            0:{
+                items:1
+            },
+            900:{
+                items:3
+            },
+            1000:{
+                items:5
             }
         }
     });
