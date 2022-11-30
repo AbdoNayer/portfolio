@@ -31,7 +31,7 @@ $(window).on('load', function () {
 
     // Loading Page
     $(".loader").fadeOut(500,function(){
-        $(".loading").delay(1000).fadeOut(500);
+        $(".spinner").delay(1000).fadeOut(500);
     });
     $("body").css("overflow-y", "auto");
 

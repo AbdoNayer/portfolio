@@ -9,55 +9,7 @@ $(window).on('load', function () {
         }
     }
 
-    if(lang === 'ar'){
-        // valName(`logo`,                             `Sh3wiZo`);
-        valName(`home`,                             `الرئيسية`);
-        valName(`about`,                            `معلومات عني`);
-        valName(`project`,                          `المشاريع`);
-        valName(`skills`,                           `المهارات`);
-        valName(`experience`,                       `الخبرة`);
-        valName(`contact`,                          `بيانات التواصل`);
-        valName(`downloadCV`,                       `تحميل السيرة الذاتية`);
-        valName(`welcome`,                          `اهلا بكم ف الموقع الشخصي`);
-        valName(`me`,                               `مرحباً, انا`);
-        valName(`myName`,                           `عبدالوهاب نير`);
-        valName(`myWork`,                           `فرونت إند ديفلوبر`);
-        valName(`desMe`,                            `خبره ف مجال البرمجه منذ ٦ سنوات ف المواقع والتطبيقات`);
-        valName(`loading`,                          `جاري التحميل ...`);
-        valName(`part1`,                            `بداءت ف المجال من ٢٠١٦ لحد الآن .`);
-        valName(`part2`,                            `بداءت ف المجال اولا ك <span class="colorMain">UI Developer</span> .`);
-        valName(`part3`,                            `تصميم وتطوير وإدارة مواقع الويب المعقدة والأطر الداخلية والتصميم سريع الاستجابة .`);
-        valName(`part4`,                            `لدي شغف بالتعلم المستمر وتطوير نفسي في مجال <span class="colorMain">Front-End Developer</span> .`);
-        valName(`part5`,                            `ثم طورت نفسي وتعلمت الكثير من المهارات ، مثل :- <br> ( <span class="colorMain">Ionic 3</span> & <span class="colorMain">Angular</span> & <span class="colorMain">ReactJS</span> & <span class="colorMain">React Native</span> ) .`);
-        valName(`part6`,                            `لقد عملت <span class="colorMain">Front-End Developer as ( React & React Native )</span> لمدة 3 سنوات .`);
-        valName(`part7`,                            `لدي خبره ف التعامل مع ( <span class="colorMain">Adobe XD</span> & <span class="colorMain">PhotoShop</span> & <Span class="colorMain">Figma</Span> )`);
-        valName(`all`,                              `الكل`);
-        valName(`show-page`,                        `مشاهده الموقع`);
-        valName(`webDes`,                           `UI Web`);
-        valName(`react`,                            `React Js & Next Js`);
-        valName(`netive`,                           `React Native`);
-        valName(`aait`,                             `موقع شركة آوامر الشبكة`);
-        valName(`afrahko`,                          `موقع أفراحكم`);
-        valName(`haraj`,                            `موقع حراج الآصل`);
-        valName(`harajSa`,                          `موقع حراج مزادات`);
-        valName(`JAK`,                              `موقع جاك`);
-        valName(`learn`,                            `موقع التعليمي`);
-        valName(`monasba`,                          `موقع مناسبات`);
-        valName(`mzadat`,                           `موقع مزادات`);
-        valName(`OPA`,                              `موقع آوبا للعقار`);
-        valName(`portfolio`,                        `موقع تعريفي`);
-        valName(`wajah`,                            `موقع وجهة`);
-        valName(`coming`,                           `تطبيق جآي`);
-        valName(`gamaia`,                           `تطبيق الجمعية`);
-        valName(`harajAl`,                          `تطبيق حراج`);
-        valName(`chifz`,                            `تطبيق آسر منتجة`);
-        valName(`altraif`,                          `تطبيق جمعية الطريف`);
-        valName(`offer`,                            `تطبيق آوفر`);
-        valName(`grab`,                             `تطبيق جراب الحاوي`);
-        valName(`elqbel`,                           `تطبيق آهل الآبل`);
-        valName(`khdma`,                            `تطبيق خدمة`);
-    }else {
-        // valName(`logo`,                             `Sh3wiZo`);
+    if(lang === 'en'){
         valName(`home`,                             `Home`);
         valName(`about`,                            `About Me`);
         valName(`project`,                          `Project`);
@@ -103,5 +55,51 @@ $(window).on('load', function () {
         valName(`grab`,                             `App Grab`);
         valName(`elqbel`,                           `App Elqbela`);
         valName(`khdma`,                            `App Khdma`);
+    }else {
+        valName(`home`,                             `الرئيسية`);
+        valName(`about`,                            `معلومات عني`);
+        valName(`project`,                          `المشاريع`);
+        valName(`skills`,                           `المهارات`);
+        valName(`experience`,                       `الخبرة`);
+        valName(`contact`,                          `بيانات التواصل`);
+        valName(`downloadCV`,                       `تحميل السيرة الذاتية`);
+        valName(`welcome`,                          `اهلا بكم ف الموقع الشخصي`);
+        valName(`me`,                               `مرحباً, انا`);
+        valName(`myName`,                           `عبدالوهاب نير`);
+        valName(`myWork`,                           `فرونت إند ديفلوبر`);
+        valName(`desMe`,                            `خبره ف مجال البرمجه منذ ٦ سنوات ف المواقع والتطبيقات`);
+        valName(`loading`,                          `جاري التحميل ...`);
+        valName(`part1`,                            `بداءت ف المجال من ٢٠١٦ لحد الآن .`);
+        valName(`part2`,                            `بداءت ف المجال اولا ك <span class="colorMain">UI Developer</span> .`);
+        valName(`part3`,                            `تصميم وتطوير وإدارة مواقع الويب المعقدة والأطر الداخلية والتصميم سريع الاستجابة .`);
+        valName(`part4`,                            `لدي شغف بالتعلم المستمر وتطوير نفسي في مجال <span class="colorMain">Front-End Developer</span> .`);
+        valName(`part5`,                            `ثم طورت نفسي وتعلمت الكثير من المهارات ، مثل :- <br> ( <span class="colorMain">Ionic 3</span> & <span class="colorMain">Angular</span> & <span class="colorMain">ReactJS</span> & <span class="colorMain">React Native</span> ) .`);
+        valName(`part6`,                            `لقد عملت <span class="colorMain">Front-End Developer as ( React & React Native )</span> لمدة 3 سنوات .`);
+        valName(`part7`,                            `لدي خبره ف التعامل مع ( <span class="colorMain">Adobe XD</span> & <span class="colorMain">PhotoShop</span> & <Span class="colorMain">Figma</Span> )`);
+        valName(`all`,                              `الكل`);
+        valName(`show-page`,                        `مشاهده الموقع`);
+        valName(`webDes`,                           `UI Web`);
+        valName(`react`,                            `React Js & Next Js`);
+        valName(`netive`,                           `React Native`);
+        valName(`aait`,                             `موقع شركة آوامر الشبكة`);
+        valName(`afrahko`,                          `موقع أفراحكم`);
+        valName(`haraj`,                            `موقع حراج الآصل`);
+        valName(`harajSa`,                          `موقع حراج مزادات`);
+        valName(`JAK`,                              `موقع جاك`);
+        valName(`learn`,                            `موقع التعليمي`);
+        valName(`monasba`,                          `موقع مناسبات`);
+        valName(`mzadat`,                           `موقع مزادات`);
+        valName(`OPA`,                              `موقع آوبا للعقار`);
+        valName(`portfolio`,                        `موقع تعريفي`);
+        valName(`wajah`,                            `موقع وجهة`);
+        valName(`coming`,                           `تطبيق جآي`);
+        valName(`gamaia`,                           `تطبيق الجمعية`);
+        valName(`harajAl`,                          `تطبيق حراج`);
+        valName(`chifz`,                            `تطبيق آسر منتجة`);
+        valName(`altraif`,                          `تطبيق جمعية الطريف`);
+        valName(`offer`,                            `تطبيق آوفر`);
+        valName(`grab`,                             `تطبيق جراب الحاوي`);
+        valName(`elqbel`,                           `تطبيق آهل الآبل`);
+        valName(`khdma`,                            `تطبيق خدمة`);
     }
 });

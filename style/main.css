@@ -257,36 +257,60 @@ button {
     opacity: 1;
   }
 }
-@-webkit-keyframes loader {
-  0% {
-    left: 0;
-    height: 30px;
-    width: 15px;
+@-webkit-keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
   }
   50% {
-    height: 8px;
-    width: 40px;
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
   }
   100% {
-    left: 235px;
-    height: 30px;
-    width: 15px;
+    stroke-dashoffset: 256;
   }
 }
-@keyframes loader {
-  0% {
-    left: 0;
-    height: 30px;
-    width: 15px;
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
   }
   50% {
-    height: 8px;
-    width: 40px;
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
   }
   100% {
-    left: 235px;
-    height: 30px;
-    width: 15px;
+    stroke-dashoffset: 256;
+  }
+}
+@-webkit-keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -18px);
+  }
+  75% {
+    transform: translate(0, -36px);
+  }
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -18px);
+  }
+  75% {
+    transform: translate(0, -36px);
+  }
+  100% {
+    transform: translate(-18px, -18px);
   }
 }
 @-webkit-keyframes socialMedia {
@@ -326,39 +350,55 @@ button {
   left: 0;
   right: 0;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: initial;
   width: 100%;
   height: 100%;
   z-index: 99999;
 }
-.loader .loading {
-  width: 250px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  font-weight: 900;
-  color: #356DFF;
-  font-size: 20px;
+.loader .load-in {
+  --duration: 3s;
+  width: 44px;
+  height: 44px;
+  position: relative;
 }
-.loader .loading::before, .loader .loading::after {
+.loader .load-in:before {
   content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
   display: block;
-  width: 15px;
-  height: 15px;
   background: #356DFF;
   position: absolute;
-  -webkit-animation: loader 0.7s infinite alternate ease-in-out;
-          animation: loader 0.7s infinite alternate ease-in-out;
+  top: 37px;
+  bottom: initial;
+  transform: translate(-18px, -18px);
+  left: 19px;
+  right: initial;
+  margin: auto;
+  -webkit-animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+          animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
-.loader .loading::before {
-  top: 0;
+.loader .load-in svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.loader .loading::after {
-  bottom: 0;
+.loader .load-in svg rect {
+  fill: none;
+  stroke: #0B0D39;
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.loader .load-in svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+          animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
 html[theme=dark] body {
