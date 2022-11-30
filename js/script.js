@@ -2,32 +2,26 @@
 
 $(window).on('load', function () {
 
-    // Mixitup
-    // var mixer = mixitup('.container-item');
-
     // Set Lang On Page Load
     const lang = localStorage.getItem("langPage");
 
-    if(lang === 'ar'){
+    if(lang === 'en'){
+        $( "html" ).attr("dir", "ltr");
+        $( "html" ).attr("lang", "en");
+        document.getElementsByClassName("btn-lang").value =  'ar';
+        $(".btn-lang").text('AR');
+    }else {
         $( "html" ).attr("dir", "rtl");
         $( "html" ).attr("lang", "ar");
         document.getElementsByClassName("btn-lang").value =  'en';
         $(".btn-lang").text('EN');
-    }else {
-        $( "html" ).attr("dir", "ltr");
-        $( "html" ).attr("lang", "en");
-        document.getElementsByClassName("btn-lang").value =  'ar';
-        $(".btn-lang").text('AR')
     }
 
     // Mode Theme
 
     const theme = localStorage.getItem("modeTheme");
 
-    if(theme === 'light'){
-        $( "html" ).attr("theme", "light");
-        $('.btn-theme').addClass('light');
-    }else if(theme === 'dark'){
+    if(theme === 'dark'){
         $( "html" ).attr("theme", "dark");
         $('.btn-theme').addClass('dark');
     }else {
