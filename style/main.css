@@ -289,6 +289,34 @@ button {
     width: 15px;
   }
 }
+@-webkit-keyframes socialMedia {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+@keyframes socialMedia {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
 .loader {
   background-color: #FFF;
   position: fixed;
@@ -1229,6 +1257,56 @@ header.header-fixed {
 }
 .section-project .sliderProject .owl-stage {
   padding-bottom: 20px;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 100px;
+  padding-top: 0;
+}
+footer .social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: initial;
+  width: 40px;
+  height: 40px;
+  background: #FFF;
+  margin: 10px;
+  border-radius: 5px;
+  color: #356DFF;
+  overflow: hidden;
+  position: relative;
+}
+footer .social li a i {
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+footer .social li a:hover i {
+  transform: scale(1.1);
+  color: #FFF;
+}
+footer .social li a::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  bottom: initial;
+  transform: rotate(45deg);
+  left: -110%;
+  right: initial;
+  margin: auto;
+  width: 120%;
+  height: 120%;
+  background: #356DFF;
+}
+footer .social li a:hover::before {
+  -webkit-animation: socialMedia 0.7s 1;
+          animation: socialMedia 0.7s 1;
+  top: -10%;
+  left: -10%;
 }
 
 @media (min-width: 320px) {

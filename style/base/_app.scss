@@ -442,3 +442,47 @@ header{
         }
     }
 }
+
+// Footer
+footer{
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 100px;
+    padding-top: 0;
+    .social{
+        li{
+            a{
+                @include flexItem(flex, center, center, row, initial);
+                width: 40px;
+                height: 40px;
+                background: $whiteColor;
+                margin: 10px;
+                border-radius: 5px;
+                color: $mainColor;
+                overflow: hidden;
+                position: relative;
+                i{
+                    font-size: 18px;
+                    transition: 0.2s linear;
+                }
+                &:hover i{
+                    transform: scale(1.1);
+                    color: $whiteColor;
+                }
+                &::before{
+                    content: "";
+                    @include positionItem(absolute, 90%, initial, -110%, initial, rotate(45deg));
+                    width: 120%;
+                    height: 120%;
+                    background: $mainColor;
+                }
+                &:hover::before{
+                    animation: socialMedia 0.7s 1;
+                    top: -10%;
+                    left: -10%;
+                }
+            }
+        }
+    }
+}
