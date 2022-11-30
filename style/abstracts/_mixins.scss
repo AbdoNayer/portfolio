@@ -45,3 +45,16 @@
         }
     }
 }
+
+// layers
+@mixin layer($dimensions, $dir, $bg){
+    @for $i from 1 through 20 {
+        .layer:nth-child(#{$i}) {
+            width: $dimensions;
+            height: $dimensions;
+            left: percentage(random(100) / 100);
+            top: percentage(random(100) / 100);
+            background-color: $bg;
+        }
+    }
+}

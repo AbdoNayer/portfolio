@@ -1309,6 +1309,16 @@ footer .social li a:hover::before {
   left: -10%;
 }
 
+.parallax {
+  height: 100%;
+  overflow-x: hidden;
+  perspective: 1px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
 @media (min-width: 320px) {
   .row .col-sm {
     flex: 1;

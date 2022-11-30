@@ -11,3 +11,7 @@
     }
     @return '-' + $device + '-' + $size;
 }
+
+@function layers($size){
+    @return '-' + $size;
+}

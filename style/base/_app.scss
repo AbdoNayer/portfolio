@@ -486,3 +486,21 @@ footer{
         }
     }
 }
+
+
+.parallax {
+    height: 100%;
+    overflow-x: hidden;
+    perspective: 1px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    // .parallax-layer {
+    //     position: absolute;
+    //     border-radius: 50%;
+    //     opacity: 0.2;
+    // }
+    // @include layer(40px, 40px, $mainColor);
+}
+  
