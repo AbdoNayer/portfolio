@@ -161,26 +161,6 @@ button {
     transform: translateY(0%);
   }
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 @-webkit-keyframes slideIn {
   from {
     transform: translateY(100%);
@@ -195,26 +175,6 @@ button {
   }
   to {
     transform: translateY(0%);
-  }
-}
-@-webkit-keyframes animatedWidth {
-  from {
-    max-width: 0;
-    opacity: 0;
-  }
-  to {
-    max-width: 100%;
-    opacity: 0;
-  }
-}
-@keyframes animatedWidth {
-  from {
-    max-width: 0;
-    opacity: 0;
-  }
-  to {
-    max-width: 100%;
-    opacity: 0;
   }
 }
 @-webkit-keyframes translate3DRight {
