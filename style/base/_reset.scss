@@ -68,6 +68,15 @@ li{
     color: $mainColor !important;
 }
 
+.overlay{
+    @include positionItem(fixed, 0, initial, initial, 0, translateX(100%));
+    @include transition(0.3s);
+    height: 100%;
+    width: 100%;
+    z-index: 998;
+    background-color: rgba(0,0,0,0.6);              
+}
+
 .back{
     transform: translate(0) !important;
 }

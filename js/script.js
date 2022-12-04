@@ -46,9 +46,9 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).width() > 1060) {
             if($(this).scrollTop() > 30){
-                $('header').addClass('header-fixed')
+                $('header').addClass('header-fixed');
             }else{
-                $('header').removeClass('header-fixed')
+                $('header').removeClass('header-fixed');
             }
         }
     });
@@ -62,6 +62,7 @@ $(document).ready(function () {
         if ($(window).width() < 990) {
             $(".handle").toggleClass("closed");
             $("nav").toggleClass("back");
+            $(".overlay").toggleClass("back");
          }
     });
 
@@ -71,9 +72,10 @@ $(document).ready(function () {
     });
 
     // Click Open Nav Mobile
-    $(document).on("click", ".click-nav",function() {
+    $(document).on("click", ".click-nav, .overlay",function() {
         $(".handle").toggleClass("closed");
         $("nav").toggleClass("back");
+        $(".overlay").toggleClass("back");
         $("nav li").toggleClass("animSlideIn");
         $("body").toggleClass("overflow-hidden");
     });

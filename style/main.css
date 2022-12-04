@@ -653,6 +653,24 @@ li {
   color: #356DFF !important;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: initial;
+  transform: translateX(100%);
+  left: initial;
+  right: 0;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .back {
   transform: translate(0) !important;
 }
@@ -1559,6 +1577,11 @@ footer .social li a:hover::before {
     will-change: scroll-position;
     contain: size style layout;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   header .head-nav nav ul {
     display: flex;
