@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="./style/main.css">
 
 </head>
-<body class="position-relative">
+<body class="position-relative" id="Home">
 
     <div class="parallax">
         <div class="parallax-layer layer"></div>
@@ -77,8 +77,8 @@
     <header>
         <div class="container">
             <div class="head-nav">
-                <a href="" class="logo">
-                    <!-- <img src="./images/lo66.png" alt=""> -->
+                <a href="">
+                    <h1 class="logo"></h1>
                 </a>
                 <div class="click-nav">
                     <div class='handle'></div>
@@ -87,14 +87,14 @@
                 </div>
                 <nav>
                     <ul>
-                        <li class="active"><a href="" class="home"></a></li>
-                        <li><a href="" class="experience"></a></li>
-                        <li><a href="" class="about"></a></li>
-                        <li><a href="" class="skills"></a></li>
-                        <li><a href="" class="project"></a></li>
-                        <li><a href="" class="contact"></a></li>
-                        <li><a href="" class="lang btn-lang"></a></li>
+                        <li class="active"><a data-value="Home" href="" class="home"></a></li>
+                        <li><a href="" data-value="Experience" class="experience"></a></li>
+                        <li><a href="" data-value="About" class="about"></a></li>
+                        <li><a href="" data-value="Skills" class="skills"></a></li>
+                        <li><a href="" data-value="Project" class="project"></a></li>
+                        <li><a href="" data-value="Contact" class="contact"></a></li>
                     </ul>
+                    <button class="lang btn-lang"></button>
                 </nav>
             </div>
         </div>
@@ -125,10 +125,17 @@
                 </div>
             </div>
         </div>
+        <!-- Wave -->
+        <section class="wave-section">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </section>
     </section>
 
     <!-- Count Section Experience -->
-    <section class="section-experience">
+    <section class="section-experience" id="Experience">
         <div class="container bgSection">
             <div class="bgToggle head-title">
                 <h4 class="experience colorMain"></h4>
@@ -236,7 +243,7 @@
     </section>
 
     <!-- Section About Me -->
-    <section class="section-about-me">
+    <section class="section-about-me" id="About">
         <div class="container">
             <div class="bgSection head-title">
                 <h4 class="about"></h4>
@@ -271,7 +278,7 @@
     </section>
 
     <!-- Count Section Skills -->
-    <section class="section-skills count-section">
+    <section class="section-skills count-section" id="Skills">
         <div class="container bgSection">
             <div class="bgToggle head-title">
                 <h4 class="skills colorMain"></h4>
@@ -523,7 +530,7 @@
     </section>
 
     <!-- Section Project -->
-    <section class="section-project">
+    <section class="section-project" id="Project">
         <div class="container">
             <div class="bgSection head-title">
                 <h4 class="project"></h4>
@@ -979,7 +986,7 @@
     </section>
 
     <!-- Section Footer -->
-    <footer class="bgSection">
+    <footer class="bgSection" id="Contact">
         <div class="container">
             <div class="bgToggle head-title">
                 <h4 class="contact colorMain"></h4>

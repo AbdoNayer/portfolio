@@ -56,13 +56,13 @@ $(document).ready(function () {
     // Scroll For Section
     $(document).on("click", "nav ul li a",function(e) {
         e.preventDefault();
-        // $('html, body').animate({
-        //     scrollTop: $('#' + $(this).data('value')).offset().top - 100
-        // }, 1000);
-        // if ($(window).width() < 990) {
-        //     $(".handle").toggleClass("closed");
-        //     $("nav").toggleClass("back");
-        //  }
+        $('html, body').animate({
+            scrollTop: $('#' + $(this).data('value')).offset().top - 100
+        }, 1000);
+        if ($(window).width() < 990) {
+            $(".handle").toggleClass("closed");
+            $("nav").toggleClass("back");
+         }
     });
 
     // Click Add class Link

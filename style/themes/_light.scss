@@ -86,11 +86,20 @@ html[theme=light] {
     header{
         .head-nav{
             background-color: $whiteColor;
+            .logo{
+                -webkit-text-stroke: 1px $mainColor;
+                &:before{
+                    color: $mainColor;
+                }
+            }
             nav{
                 background-color: $whiteColor;
                 li{
+                    a{
+                        color: $mainColor;
+                    }
                     &::after{
-                        background-color: $secondColor;
+                        background-color: $mainColor;
                     }
                 }
             }

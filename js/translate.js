@@ -10,6 +10,7 @@ $(window).on('load', function () {
     }
 
     if(lang === 'en'){
+        valName(`logo`,                             `PRO CODE`);
         valName(`home`,                             `Home`);
         valName(`about`,                            `About Me`);
         valName(`project`,                          `Project`);
@@ -56,6 +57,7 @@ $(window).on('load', function () {
         valName(`elqbel`,                           `App Elqbela`);
         valName(`khdma`,                            `App Khdma`);
     }else {
+        valName(`logo`,                             `PRO CODE`);
         valName(`home`,                             `الرئيسية`);
         valName(`about`,                            `معلومات عني`);
         valName(`project`,                          `المشاريع`);

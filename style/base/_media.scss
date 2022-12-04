@@ -36,8 +36,9 @@
     
     // Header
     header{
+        top: 20px;
         .head-nav{
-            padding: 15px 25px;
+            padding: 5px 25px;
             nav{
                 @include positionItem(fixed, 0, initial, initial, 0, translateX(100%));
                 height: 100%;
@@ -74,11 +75,15 @@
     
     // Content View
     .content-view{
-        padding-top: 0px;
-        padding-bottom: 50px;
+        padding-top: 100px;
+        padding-bottom: 0;
         text-align: center;
+        .container, .row {
+            height: initial;
+            position: relative;
+            z-index: 99;
+        }
         .info-title{
-            margin-top: 40px;
             .info-me{
                 @include flexItem(flex, center, center, row, initial);
                 h1{

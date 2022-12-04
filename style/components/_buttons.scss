@@ -6,6 +6,7 @@
 button{
     background-color: transparent;
     border: 0;
+    cursor: pointer;
 }
   
 .btnMain{
@@ -15,7 +16,6 @@ button{
 }
   
 .btn-button{
-    cursor: pointer;
     border-radius: 50px;
     display: flex;
     align-items: center;
