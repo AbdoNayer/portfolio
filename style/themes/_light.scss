@@ -45,6 +45,14 @@ html[theme=light] {
         }
     }
 
+    // Wave
+    .wave {
+        filter: drop-shadow(0px -2px 5px #eee);
+        path{
+            fill: $whiteColor;
+        }
+    }
+
     // Style Click Nav
     .click-nav {
         .handle {
