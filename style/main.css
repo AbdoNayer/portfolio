@@ -999,6 +999,8 @@ header.header-fixed {
 }
 .content-view .container, .content-view .row {
   height: 100%;
+  position: relative;
+  z-index: 99;
 }
 .content-view .row {
   flex-direction: row-reverse;
@@ -1559,10 +1561,16 @@ footer .social li a:hover::before {
     right: 10px;
     margin: auto;
   }
+  header .head-nav nav button {
+    width: 50%;
+    border-radius: 5px;
+    margin: 10px 25px;
+  }
   .content-view {
     padding-top: 100px;
     padding-bottom: 0;
     text-align: center;
+    height: auto;
   }
   .content-view .container, .content-view .row {
     height: initial;
