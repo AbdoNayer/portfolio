@@ -216,35 +216,6 @@ $(document).ready(function () {
         }
     });
 
-    // Slider Project
-    $('#sliderProject').owlCarousel({
-        loop:true,
-        margin:5,
-        center:false,
-        autoplay:true,
-        autoplayTimeout: 3000,
-        smartSpeed: 1000,
-        animateOut: 'fadeOut',
-        dragEndSpeed: 3000,
-        pagination : false,
-        nav:true,
-        navText: [
-            '<i class="icon-arrow"></i>',
-            '<i class="icon-arrow"></i>'
-        ],
-        responsive:{
-            0:{
-                items:1
-            },
-            900:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-        }
-    });
-
 });
 
 // window.addEventListener('scroll', ()=>{

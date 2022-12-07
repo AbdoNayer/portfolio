@@ -24,20 +24,6 @@ button{
     width: 180px;
     position: relative;
     font-size: 15px;
-    &:before{
-      content: "";
-      height: 3px;
-      width: 20px;
-      @include positionItem(absolute, -1px, initial, initial, 22px, initial);
-      z-index: 2;
-    }
-    &::after{
-      content: "";
-      height: 3px;
-      width: 20px;
-      @include positionItem(absolute, initial, -1px, 22px, initial, initial);
-      z-index: 2;
-    }
     &:hover{
       transform: scale(0.9);
     }

@@ -192,7 +192,7 @@ $(document).ready(function () {
     // Image Projects
     arrImg.forEach(function(image) {
         let inItemImg = `
-        <div class="item">
+        <div class="col-md-3 col-sm-12">
                 
                 <a href=${image.url} data-fancybox="watermrk" data-caption="caption" class="img-project position-relative overflow-hidden">
                     <main class="position-relative">    

@@ -6,9 +6,9 @@ button {
 }
 
 .btnMain {
-  background: #356DFF !important;
+  background: #00D084 !important;
   color: #FFF !important;
-  border: 1px solid #356DFF !important;
+  border: 1px solid #00D084 !important;
 }
 
 .btn-button {
@@ -20,32 +20,6 @@ button {
   width: 180px;
   position: relative;
   font-size: 15px;
-}
-.btn-button:before {
-  content: "";
-  height: 3px;
-  width: 20px;
-  position: absolute;
-  top: -1px;
-  bottom: initial;
-  transform: initial;
-  left: initial;
-  right: 22px;
-  margin: auto;
-  z-index: 2;
-}
-.btn-button::after {
-  content: "";
-  height: 3px;
-  width: 20px;
-  position: absolute;
-  top: initial;
-  bottom: -1px;
-  transform: initial;
-  left: 22px;
-  right: initial;
-  margin: auto;
-  z-index: 2;
 }
 .btn-button:hover {
   transform: scale(0.9);
@@ -232,6 +206,40 @@ button {
             clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 }
+@-webkit-keyframes pathAnim-0 {
+  0% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 107.14285714285714,160.25 214.28571428571428,120.5 327,131 C 439.7142857142857,141.5 558,202.25 671,203 C 784,203.75 891.7142857142858,144.5 1019,134 C 1146.2857142857142,123.5 1293.142857142857,161.75 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  25% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 95.71428571428572,206.5 191.42857142857144,213 336,198 C 480.57142857142856,183 674,146.5 786,133 C 898,119.5 928.5714285714284,129.00000000000003 1024,144 C 1119.4285714285716,158.99999999999997 1279.7142857142858,179.5 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  50% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 94.53571428571428,211.25 189.07142857142856,222.5 312,218 C 434.92857142857144,213.5 586.25,193.25 723,176 C 859.75,158.75 981.9285714285716,144.5 1099,149 C 1216.0714285714284,153.5 1328.0357142857142,176.75 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  75% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 104.64285714285714,162.57142857142856 209.28571428571428,125.14285714285714 318,148 C 426.7142857142857,170.85714285714286 539.5000000000001,254 669,260 C 798.4999999999999,266 944.7142857142858,194.85714285714286 1076,172 C 1207.2857142857142,149.14285714285714 1323.642857142857,174.57142857142856 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  100% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 107.14285714285714,160.25 214.28571428571428,120.5 327,131 C 439.7142857142857,141.5 558,202.25 671,203 C 784,203.75 891.7142857142858,144.5 1019,134 C 1146.2857142857142,123.5 1293.142857142857,161.75 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+}
+@keyframes pathAnim-0 {
+  0% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 107.14285714285714,160.25 214.28571428571428,120.5 327,131 C 439.7142857142857,141.5 558,202.25 671,203 C 784,203.75 891.7142857142858,144.5 1019,134 C 1146.2857142857142,123.5 1293.142857142857,161.75 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  25% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 95.71428571428572,206.5 191.42857142857144,213 336,198 C 480.57142857142856,183 674,146.5 786,133 C 898,119.5 928.5714285714284,129.00000000000003 1024,144 C 1119.4285714285716,158.99999999999997 1279.7142857142858,179.5 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  50% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 94.53571428571428,211.25 189.07142857142856,222.5 312,218 C 434.92857142857144,213.5 586.25,193.25 723,176 C 859.75,158.75 981.9285714285716,144.5 1099,149 C 1216.0714285714284,153.5 1328.0357142857142,176.75 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  75% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 104.64285714285714,162.57142857142856 209.28571428571428,125.14285714285714 318,148 C 426.7142857142857,170.85714285714286 539.5000000000001,254 669,260 C 798.4999999999999,266 944.7142857142858,194.85714285714286 1076,172 C 1207.2857142857142,149.14285714285714 1323.642857142857,174.57142857142856 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+  100% {
+    d: path("M 0,400 C 0,400 0,200 0,200 C 107.14285714285714,160.25 214.28571428571428,120.5 327,131 C 439.7142857142857,141.5 558,202.25 671,203 C 784,203.75 891.7142857142858,144.5 1019,134 C 1146.2857142857142,123.5 1293.142857142857,161.75 1440,200 C 1440,200 1440,400 1440,400 Z");
+  }
+}
 .loader {
   background-color: #FFF;
   position: fixed;
@@ -262,7 +270,7 @@ button {
   height: 6px;
   border-radius: 50%;
   display: block;
-  background: #356DFF;
+  background: #00D084;
   position: absolute;
   top: 37px;
   bottom: initial;
@@ -280,7 +288,7 @@ button {
 }
 .loader .load-in svg rect {
   fill: none;
-  stroke: #0B0D39;
+  stroke: #363636;
   stroke-width: 10px;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -293,19 +301,19 @@ button {
 }
 
 html[theme=dark] body {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] ::-moz-selection {
-  background: #356DFF;
-  color: #356DFF;
+  background: #00D084;
+  color: #00D084;
 }
 html[theme=dark] ::selection {
-  background: #356DFF;
-  color: #356DFF;
+  background: #00D084;
+  color: #00D084;
 }
 html[theme=dark] ::-moz-selection {
-  background: #356DFF;
-  color: #356DFF;
+  background: #00D084;
+  color: #00D084;
 }
 html[theme=dark] a {
   color: #FFF;
@@ -317,18 +325,18 @@ html[theme=dark] .colorSecond {
   color: #FFF;
 }
 html[theme=dark] .bgSection {
-  background-color: rgba(26, 28, 70, 0.9);
+  background-color: rgb(64, 64, 64);
 }
 html[theme=dark] .bgToggle {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] .click-nav .handle {
   background-color: #FFF;
 }
 html[theme=dark] .btnSecond {
-  background: #356DFF !important;
+  background: #00D084 !important;
   color: #FFF !important;
-  border: 1px solid #356DFF !important;
+  border: 1px solid #00D084 !important;
 }
 html[theme=dark] .btnBorder {
   background: transparent !important;
@@ -336,31 +344,31 @@ html[theme=dark] .btnBorder {
   border: 1px solid #FFF !important;
 }
 html[theme=dark] .btn-button:before {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] .btn-button::after {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] .owl-switch .owl-nav button {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] .owl-switch .owl-nav button i {
   color: #FFF;
 }
 html[theme=dark] .wave {
-  filter: drop-shadow(0px -2px 5px rgba(26, 28, 70, 0.9));
+  filter: drop-shadow(0px -2px 5px rgb(64, 64, 64));
 }
 html[theme=dark] .wave path {
-  fill: #0B0D39;
+  fill: #363636;
 }
 html[theme=dark] .theme button {
-  background-color: rgba(26, 28, 70, 0.9);
+  background-color: rgb(64, 64, 64);
 }
 html[theme=dark] .theme button i {
   color: #FFF;
 }
 html[theme=dark] header .head-nav {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] header .head-nav .logo {
   -webkit-text-stroke: 1px #FFF;
@@ -369,7 +377,7 @@ html[theme=dark] header .head-nav .logo:before {
   color: #FFF;
 }
 html[theme=dark] header .head-nav nav {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] header .head-nav nav li a {
   color: #FFF;
@@ -378,56 +386,56 @@ html[theme=dark] header .head-nav nav li::after {
   background-color: #FFF;
 }
 html[theme=dark] .count-section .bgSection .count-box .svg-box svg circle {
-  stroke: rgba(26, 28, 70, 0.9);
+  stroke: rgb(64, 64, 64);
 }
 html[theme=dark] .head-title::after {
-  border-top: 15px solid rgba(26, 28, 70, 0.9);
+  border-top: 15px solid rgb(64, 64, 64);
 }
 html[theme=dark] .head-title::before {
-  border-top: 15px solid rgba(26, 28, 70, 0.9);
+  border-top: 15px solid rgb(64, 64, 64);
 }
 html[theme=dark] .head-title.bgToggle h4::before, html[theme=dark] .head-title.bgToggle h4::after {
-  box-shadow: 0 -25px 0 0 #0B0D39;
+  box-shadow: 0 -25px 0 0 #363636;
 }
 html[theme=dark] .head-title.bgToggle::after {
-  border-top: 15px solid #0B0D39;
+  border-top: 15px solid #363636;
 }
 html[theme=dark] .head-title.bgToggle::before {
-  border-top: 15px solid #0B0D39;
+  border-top: 15px solid #363636;
 }
 html[theme=dark] .section-about-me .img-about-me img:first-child {
   opacity: 1;
 }
 html[theme=dark] .section-experience .block-experience {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=dark] .section-experience .block-experience .icon-head::after, html[theme=dark] .section-experience .block-experience .icon-head::before {
-  border-top: 15px solid rgba(26, 28, 70, 0.9);
+  border-top: 15px solid rgb(64, 64, 64);
 }
 
 html[theme=light] body {
   background-color: #FFF;
 }
 html[theme=light] ::-moz-selection {
-  background: #356DFF;
-  color: #356DFF;
+  background: #00D084;
+  color: #00D084;
 }
 html[theme=light] ::selection {
-  background: #356DFF;
-  color: #356DFF;
+  background: #00D084;
+  color: #00D084;
 }
 html[theme=light] ::-moz-selection {
-  background: #356DFF;
-  color: #356DFF;
+  background: #00D084;
+  color: #00D084;
 }
 html[theme=light] a {
-  color: #0B0D39;
+  color: #363636;
 }
 html[theme=light] h1, html[theme=light] h2, html[theme=light] h3, html[theme=light] h4, html[theme=light] h5, html[theme=light] h6, html[theme=light] p, html[theme=light] li {
-  color: #0B0D39;
+  color: #363636;
 }
 html[theme=light] .colorSecond {
-  color: #0B0D39;
+  color: #363636;
 }
 html[theme=light] .bgSection {
   background-color: rgba(242, 251, 252, 0.9);
@@ -439,7 +447,7 @@ html[theme=light] .owl-switch .owl-nav button {
   background-color: #FFF;
 }
 html[theme=light] .owl-switch .owl-nav button i {
-  color: #0B0D39;
+  color: #363636;
 }
 html[theme=light] .wave {
   filter: drop-shadow(0px -2px 5px #eee);
@@ -448,17 +456,17 @@ html[theme=light] .wave path {
   fill: #FFF;
 }
 html[theme=light] .click-nav .handle {
-  background-color: #0B0D39;
+  background-color: #363636;
 }
 html[theme=light] .btnSecond {
-  background: #0B0D39 !important;
+  background: #363636 !important;
   color: #FFF !important;
-  border: 1px solid #0B0D39 !important;
+  border: 1px solid #363636 !important;
 }
 html[theme=light] .btnBorder {
   background: transparent !important;
-  color: #0B0D39 !important;
-  border: 1px solid #0B0D39 !important;
+  color: #363636 !important;
+  border: 1px solid #363636 !important;
 }
 html[theme=light] .btn-button:before {
   background-color: #FFF;
@@ -470,25 +478,25 @@ html[theme=light] .theme button {
   background-color: #FFF;
 }
 html[theme=light] .theme button i {
-  color: #0B0D39;
+  color: #363636;
 }
 html[theme=light] header .head-nav {
   background-color: #FFF;
 }
 html[theme=light] header .head-nav .logo {
-  -webkit-text-stroke: 1px #356DFF;
+  -webkit-text-stroke: 1px #00D084;
 }
 html[theme=light] header .head-nav .logo:before {
-  color: #356DFF;
+  color: #00D084;
 }
 html[theme=light] header .head-nav nav {
   background-color: #FFF;
 }
 html[theme=light] header .head-nav nav li a {
-  color: #356DFF;
+  color: #00D084;
 }
 html[theme=light] header .head-nav nav li::after {
-  background-color: #356DFF;
+  background-color: #00D084;
 }
 html[theme=light] .count-section .bgSection .count-box .svg-box svg circle {
   stroke: rgba(242, 251, 252, 0.9);
@@ -527,7 +535,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "Cairo", sans-serif;
   scroll-behavior: smooth;
 }
@@ -574,7 +582,7 @@ li {
 }
 
 .colorMain {
-  color: #356DFF !important;
+  color: #00D084 !important;
 }
 
 .overlay {
@@ -778,7 +786,7 @@ li {
   background: #FFF;
   margin: 5px 10px;
   border-radius: 5px;
-  color: #356DFF;
+  color: #00D084;
   overflow: hidden;
   position: relative;
 }
@@ -801,7 +809,7 @@ li {
   margin: auto;
   width: 120%;
   height: 120%;
-  background: #356DFF;
+  background: #00D084;
 }
 .block-media .social li a:hover::before {
   -webkit-animation: socialMedia 0.7s 1;
@@ -958,7 +966,7 @@ header .head-nav nav button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #356DFF;
+  background-color: #00D084;
   color: #FFF;
 }
 header.header-fixed {
@@ -966,6 +974,9 @@ header.header-fixed {
           animation: slideDown 0.7s;
 }
 
+.content-view {
+  width: 100%;
+}
 .content-view .container, .content-view .row {
   height: 100%;
   z-index: 99;
@@ -1124,7 +1135,7 @@ header.header-fixed {
   margin: auto;
   width: 2px;
   height: 93%;
-  background-color: #356DFF;
+  background-color: #00D084;
 }
 .section-about-me .desc-about-me ul li {
   margin: 20px 0;
@@ -1143,7 +1154,7 @@ header.header-fixed {
   margin: auto;
   width: 10px;
   height: 10px;
-  background-color: #356DFF;
+  background-color: #00D084;
 }
 .section-about-me .desc-about-me ul li span {
   font-weight: bold;
@@ -1222,7 +1233,7 @@ header.header-fixed {
 }
 .count-section .bgSection .pernet-count .count-box .svg-box svg .bar {
   stroke-width: 10;
-  stroke: #356DFF !important;
+  stroke: #00D084 !important;
   stroke-linecap: round;
 }
 
@@ -1243,37 +1254,42 @@ header.header-fixed {
   width: 100%;
   height: 400px;
 }
-.section-project .sliderProject .owl-prev {
-  top: 45% !important;
-  left: 0 !important;
-}
-.section-project .sliderProject .owl-next {
-  top: 45% !important;
-  right: 0 !important;
-}
-.section-project .sliderProject .owl-stage {
-  padding-bottom: 20px;
-}
 
-svg {
+.wave-fix {
   position: absolute;
   bottom: 0;
   right: 0;
+  position: fixed;
+  top: initial;
+  bottom: 0;
+  transform: initial;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.wave-fix .path-0 {
+  -webkit-animation: pathAnim-0 4s;
+          animation: pathAnim-0 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 section {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  flex-wrap: initial;
   width: 100%;
 }
 
-.over-shape {
+.pop {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 30px;
-  border-radius: 30px;
+  border-radius: 20px;
   height: 70%;
-  width: 100%;
 }
 
 @media (min-width: 320px) {
