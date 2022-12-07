@@ -321,6 +321,34 @@ button {
             clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 }
+@-webkit-keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
+  }
+}
 .loader {
   background-color: #FFF;
   position: fixed;
@@ -618,6 +646,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a, button, input, textarea, i {
@@ -1052,18 +1081,10 @@ header.header-fixed {
 }
 .content-view .shape-anime .shape {
   background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  -webkit-animation: morph 4s ease-in-out infinite;
-          animation: morph 4s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  height: 500px;
-  width: 500px;
   transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
-  z-index: 5;
-  margin: auto;
-  opacity: 0.2;
   position: absolute;
   top: 50%;
   bottom: initial;
@@ -1071,34 +1092,14 @@ header.header-fixed {
   left: 0;
   right: 0;
   margin: auto;
-}
-@-webkit-keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-}
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
+  -webkit-animation: morph 4s ease-in-out infinite;
+          animation: morph 4s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 500px;
+  width: 500px;
+  z-index: 5;
+  margin: auto;
+  opacity: 0.2;
 }
 
 .section-experience {
@@ -1113,7 +1114,7 @@ header.header-fixed {
   text-align: center;
   padding: 20px;
   margin: 35px auto;
-  max-width: 550px;
+  max-width: 60%;
   padding-top: 100px;
 }
 .section-experience .block-experience .icon-head {

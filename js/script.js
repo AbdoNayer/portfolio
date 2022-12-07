@@ -102,12 +102,42 @@ $(document).ready(function () {
         }
     });
     
+
+    // Slider Experience
+    $('#sliderExperience').owlCarousel({
+        loop:true,
+        margin:5,
+        center:true,
+        autoplay:true,
+        autoplayTimeout: 9000,
+        smartSpeed: 1000,
+        animateOut: 'fadeOut',
+        dragEndSpeed: 3000,
+        pagination : false,
+        nav:true,
+        navText: [
+            '<i class="icon-arrow"></i>',
+            '<i class="icon-arrow"></i>'
+        ],
+        responsive:{
+            0:{
+                items:1
+            },
+            900:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+
     // Slider Skills
     $('#sliderSkills').owlCarousel({
-        loop:false,
+        loop:true,
         margin:5,
         center:false,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout: 3000,
         smartSpeed: 1000,
         animateOut: 'fadeOut',
@@ -131,41 +161,12 @@ $(document).ready(function () {
         }
     });
 
-    // Slider Experience
-    $('#sliderExperience').owlCarousel({
-        loop:false,
-        margin:5,
-        center:false,
-        autoplay:false,
-        autoplayTimeout: 3000,
-        smartSpeed: 1000,
-        animateOut: 'fadeOut',
-        dragEndSpeed: 3000,
-        pagination : false,
-        nav:true,
-        navText: [
-            '<i class="icon-arrow"></i>',
-            '<i class="icon-arrow"></i>'
-        ],
-        responsive:{
-            0:{
-                items:1
-            },
-            900:{
-                items:1
-            },
-            1000:{
-                items:2
-            }
-        }
-    });
-
     // Slider Project
     $('#sliderProject').owlCarousel({
-        loop:false,
+        loop:true,
         margin:5,
         center:false,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout: 3000,
         smartSpeed: 1000,
         animateOut: 'fadeOut',
@@ -191,5 +192,13 @@ $(document).ready(function () {
 
 });
 
+// window.addEventListener('scroll', ()=>{
+
+//     let val     = window.scrollY;
+//     let item    = document.getElementById('framer');
+
+//     item.style.left = val * -2 + 'px';
+
+// });
 
 
