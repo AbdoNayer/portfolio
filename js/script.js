@@ -42,6 +42,62 @@ $(window).on('load', function () {
 
 $(document).ready(function () {
 
+    // Scroll Count Skills
+    let a = 0;
+    $(window).scroll(function() {
+        
+        let oTop = $('.count-section').offset().top - window.innerHeight;
+
+        if (a === 0 && $(window).scrollTop() > oTop) {
+            
+            $(".svg-box").each(function() {
+
+                var bar, c, percent, r, range, $this = $(this);
+
+                percent     = $this.data('percent');
+
+                bar         = $this.find('.bar');
+
+                r           = bar.attr('r');
+
+                c           = Math.PI * (r * 2);
+
+                range       = ((100 - percent) / 100) * c;
+                    
+
+                bar.css({
+                    'stroke-dashoffset': c,
+                    'stroke-dasharray': c
+                });
+
+                bar.animate({
+                    strokeDashoffset: range
+                }, 1000, 'linear');
+
+                $this.prop('Counter', 0).animate({Counter: percent},
+                {
+                    duration: 1000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $this.find(".textCount").text(Math.ceil(now)+"%");
+                    }
+                });
+
+
+            });
+
+        }
+
+    });
+
+    // Scrollify 
+    $(function() {
+        $.scrollify({
+            section : "section",
+            before:function() {}
+        });
+    });
+
     // Scroll Fix Header
     $(window).scroll(function () {
         if ($(window).width() > 1060) {
@@ -101,7 +157,6 @@ $(document).ready(function () {
             $('.btn-theme').removeClass('dark');
         }
     });
-    
 
     // Slider Experience
     $('#sliderExperience').owlCarousel({
@@ -182,10 +237,10 @@ $(document).ready(function () {
                 items:1
             },
             900:{
-                items:3
+                items:2
             },
             1000:{
-                items:5
+                items:3
             }
         }
     });

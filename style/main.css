@@ -51,95 +51,6 @@ button {
   transform: scale(0.9);
 }
 
-.tilter {
-  display: block;
-  position: relative;
-  width: 280px;
-  height: 400px;
-  margin: 20px auto;
-  color: #FFF;
-  flex: none;
-  perspective: 1000px;
-}
-.tilter:hover, .tilter:focus {
-  color: #FFF;
-  outline: none;
-}
-.tilter * {
-  pointer-events: none;
-}
-.tilter .tilter__figure, .tilter .tilter__image {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.tilter .tilter__figure > * {
-  transform: translateZ(0px);
-}
-.tilter .tilter__figure::before {
-  content: "";
-  position: absolute;
-  top: 5%;
-  bottom: initial;
-  transform: initial;
-  left: 5%;
-  right: 0;
-  margin: auto;
-  width: 90%;
-  height: 90%;
-  box-shadow: 0 30px 20px rgba(35, 32, 39, 0.5);
-}
-.tilter .tilter__figure .tilter__deco--shine div {
-  position: absolute;
-  top: -50%;
-  bottom: initial;
-  transform: initial;
-  left: -50%;
-  right: 0;
-  margin: auto;
-  width: 200%;
-  height: 200%;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
-}
-.tilter .tilter__figure .tilter__caption {
-  position: absolute;
-  top: initial;
-  bottom: 45px;
-  transform: initial;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  width: 100%;
-  z-index: 9;
-}
-.tilter .tilter__figure .tilter__caption .tilter__title {
-  margin: 0;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-  color: #FFF;
-}
-.tilter .tilter__figure .tilter__deco {
-  position: absolute;
-  top: 0;
-  bottom: initial;
-  transform: initial;
-  left: 0;
-  right: initial;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.tilter .tilter__figure .tilter__deco.tilter__deco--lines {
-  fill: none;
-  stroke: #FFF;
-  stroke-width: 1.5px;
-}
-
 @-webkit-keyframes slideDown {
   0% {
     opacity: 0;
@@ -319,34 +230,6 @@ button {
   50% {
     -webkit-clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
             clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-  }
-}
-@-webkit-keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-}
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
   }
 }
 .loader {
@@ -824,7 +707,13 @@ li {
 }
 
 .theme {
-  position: relative;
+  position: fixed;
+  top: initial;
+  bottom: 20px;
+  transform: initial;
+  left: initial;
+  right: initial;
+  margin: auto;
   z-index: 999;
 }
 .theme button {
@@ -856,6 +745,69 @@ li {
 }
 .theme button.dark .icon-moon {
   transform: translate(-100%, -50%) !important;
+}
+
+.block-media {
+  position: fixed;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: initial;
+  margin: auto;
+  z-index: 999;
+}
+.block-media .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: initial;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 50px;
+  padding: 15px 0;
+}
+.block-media .social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: initial;
+  width: 40px;
+  height: 40px;
+  background: #FFF;
+  margin: 5px 10px;
+  border-radius: 5px;
+  color: #356DFF;
+  overflow: hidden;
+  position: relative;
+}
+.block-media .social li a i {
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+.block-media .social li a:hover i {
+  transform: scale(1.1);
+  color: #FFF;
+}
+.block-media .social li a::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  bottom: initial;
+  transform: rotate(45deg);
+  left: -110%;
+  right: initial;
+  margin: auto;
+  width: 120%;
+  height: 120%;
+  background: #356DFF;
+}
+.block-media .social li a:hover::before {
+  -webkit-animation: socialMedia 0.7s 1;
+          animation: socialMedia 0.7s 1;
+  top: -10%;
+  left: -10%;
 }
 
 .head-title {
@@ -918,15 +870,9 @@ li {
   margin: auto;
 }
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 header {
   position: fixed;
-  top: 40px;
+  top: 25px;
   z-index: 9999;
   width: 100%;
 }
@@ -1020,15 +966,8 @@ header.header-fixed {
           animation: slideDown 0.7s;
 }
 
-.content-view {
-  width: 100%;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
 .content-view .container, .content-view .row {
   height: 100%;
-  position: relative;
   z-index: 99;
 }
 .content-view .row {
@@ -1078,28 +1017,6 @@ header.header-fixed {
   z-index: 99;
   -webkit-animation: translate3DTop 1s;
           animation: translate3DTop 1s;
-}
-.content-view .shape-anime .shape {
-  background: linear-gradient(45deg, #356DFF 0%, #356DFF 100%);
-  transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  position: absolute;
-  top: 50%;
-  bottom: initial;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  margin: auto;
-  -webkit-animation: morph 4s ease-in-out infinite;
-          animation: morph 4s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  height: 500px;
-  width: 500px;
-  z-index: 5;
-  margin: auto;
-  opacity: 0.2;
 }
 
 .section-experience {
@@ -1198,6 +1115,13 @@ header.header-fixed {
 }
 .section-about-me .desc-about-me ul::after {
   content: "";
+  position: absolute;
+  top: 10px;
+  bottom: initial;
+  transform: initial;
+  left: initial;
+  right: initial;
+  margin: auto;
   width: 2px;
   height: 93%;
   background-color: #356DFF;
@@ -1210,6 +1134,13 @@ header.header-fixed {
 }
 .section-about-me .desc-about-me ul li::after {
   content: "";
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: initial;
+  margin: auto;
   width: 10px;
   height: 10px;
   background-color: #356DFF;
@@ -1303,6 +1234,15 @@ header.header-fixed {
 .section-project .sliderProject .content .tilter__title {
   direction: rtl;
 }
+.section-project .sliderProject .img-project {
+  display: block;
+  border: 5px solid #eee;
+  border-radius: 10px;
+}
+.section-project .sliderProject .img-project main img {
+  width: 100%;
+  height: 400px;
+}
 .section-project .sliderProject .owl-prev {
   top: 45% !important;
   left: 0 !important;
@@ -1315,54 +1255,25 @@ header.header-fixed {
   padding-bottom: 20px;
 }
 
-footer {
-  padding: 50px;
-  text-align: center;
-  overflow: hidden;
-  margin-top: 100px;
-  padding-top: 0;
+svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
-footer .social li a {
+
+section {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: initial;
-  width: 40px;
-  height: 40px;
-  background: #FFF;
-  margin: 10px;
-  border-radius: 5px;
-  color: #356DFF;
-  overflow: hidden;
-  position: relative;
+  width: 100%;
 }
-footer .social li a i {
-  font-size: 18px;
-  transition: 0.2s linear;
-}
-footer .social li a:hover i {
-  transform: scale(1.1);
-  color: #FFF;
-}
-footer .social li a::before {
-  content: "";
-  position: absolute;
-  top: 90%;
-  bottom: initial;
-  transform: rotate(45deg);
-  left: -110%;
-  right: initial;
-  margin: auto;
-  width: 120%;
-  height: 120%;
-  background: #356DFF;
-}
-footer .social li a:hover::before {
-  -webkit-animation: socialMedia 0.7s 1;
-          animation: socialMedia 0.7s 1;
-  top: -10%;
-  left: -10%;
+
+.over-shape {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 30px;
+  border-radius: 30px;
+  height: 70%;
+  width: 100%;
 }
 
 @media (min-width: 320px) {
@@ -1602,14 +1513,14 @@ footer .social li a:hover::before {
 html[dir=ltr] body {
   direction: ltr;
 }
-html[dir=ltr] .theme {
-  position: fixed;
-  top: initial;
-  bottom: 20px;
-  transform: initial;
-  left: initial;
+html[dir=ltr] .theme, html[dir=ltr] .block-media {
   right: 20px;
-  margin: auto;
+}
+html[dir=ltr] .section-about-me .desc-about-me ul::after {
+  left: 4px;
+}
+html[dir=ltr] .section-about-me .desc-about-me ul li::after {
+  left: 0;
 }
 @media (max-width: 1060px) {
   html[dir=ltr] header .head-nav nav {
@@ -1641,54 +1552,18 @@ html[dir=ltr] .theme {
     margin: auto;
   }
 }
-html[dir=ltr] .section-about-me .desc-about-me ul::after {
-  position: absolute;
-  top: 10px;
-  bottom: initial;
-  transform: initial;
-  left: 4px;
-  right: initial;
-  margin: auto;
-}
-html[dir=ltr] .section-about-me .desc-about-me ul li::after {
-  position: absolute;
-  top: 50%;
-  bottom: initial;
-  transform: translateY(-50%);
-  left: 0;
-  right: initial;
-  margin: auto;
-}
 
 html[dir=rtl] body {
   direction: rtl;
 }
-html[dir=rtl] .theme {
-  position: fixed;
-  top: initial;
-  bottom: 20px;
-  transform: initial;
+html[dir=rtl] .theme, html[dir=rtl] .block-media {
   left: 20px;
-  right: initial;
-  margin: auto;
 }
 html[dir=rtl] .section-about-me .desc-about-me ul::after {
-  position: absolute;
-  top: 10px;
-  bottom: initial;
-  transform: initial;
-  left: initial;
   right: 4px;
-  margin: auto;
 }
 html[dir=rtl] .section-about-me .desc-about-me ul li::after {
-  position: absolute;
-  top: 50%;
-  bottom: initial;
-  transform: translateY(-50%);
-  left: initial;
   right: 0;
-  margin: auto;
 }
 @media (max-width: 1060px) {
   html[dir=rtl] header .head-nav nav {
