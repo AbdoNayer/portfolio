@@ -94,7 +94,21 @@ $(document).ready(function () {
     $(function() {
         $.scrollify({
             section : "section",
-            before:function() {}
+            sectionName : "section-name",
+            interstitialSection : "",
+            easing: "easeOutExpo",
+            scrollSpeed: 1100,
+            offset : 0,
+            scrollbars: true,
+            standardScrollElements: "",
+            setHeights: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll:true,
+            before:function() {},
+            after:function() {},
+            afterResize:function() {},
+            afterRender:function() {}
         });
     });
 
@@ -113,7 +127,7 @@ $(document).ready(function () {
     $(document).on("click", "nav ul li a",function(e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#' + $(this).data('value')).offset().top - 100
+            scrollTop: $('#' + $(this).data('value')).offset().top
         }, 1000);
         if ($(window).width() < 990) {
             $(".handle").toggleClass("closed");

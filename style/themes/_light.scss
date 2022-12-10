@@ -34,16 +34,6 @@ html[theme=light] {
     .bgToggle{
         background-color: $whiteColor;
     }
-    .owl-switch {
-        .owl-nav{
-            button{
-                background-color: $whiteColor;
-                i{
-                    color: $secondColor;
-                }
-            }
-        }
-    }
 
     // Wave
     .wave {
@@ -60,23 +50,15 @@ html[theme=light] {
         }
     }
 
-    // BTN
-    .btnSecond{
-        background: $secondColor !important;
-        color: $whiteColor !important;
-        border: 1px solid $secondColor !important;
-    }
-    .btnBorder{
-        background: transparent !important;
-        color: $secondColor !important;
-        border: 1px solid $secondColor !important;
-    }
-    .btn-button{
-        &:before{
-          background-color: $whiteColor;
-        }
-        &::after{
-          background-color: $whiteColor;
+    // Owl
+    .owl-switch {
+        .owl-nav{
+            button{
+                background-color: $whiteColor;
+                i{
+                    color: $secondColor;
+                }
+            }
         }
     }
 

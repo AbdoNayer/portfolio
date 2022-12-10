@@ -81,7 +81,6 @@
                         <li><a href="" data-value="About" class="about"></a></li>
                         <li><a href="" data-value="Skills" class="skills"></a></li>
                         <li><a href="" data-value="Project" class="project"></a></li>
-                        <li><a href="" data-value="Contact" class="contact"></a></li>
                     </ul>
                     <button class="lang btn-lang"></button>
                 </nav>
@@ -89,34 +88,37 @@
         </div>
     </header>
 
-    <!-- Shape SVG -->                
-    <svg width="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="wave-fix transition duration-300 ease-in-out delay-150">
-        <path d="M 0,400 C 0,400 0,200 0,200 C 107.14285714285714,160.25 214.28571428571428,120.5 327,131 C 439.7142857142857,141.5 558,202.25 671,203 C 784,203.75 891.7142857142858,144.5 1019,134 C 1146.2857142857142,123.5 1293.142857142857,161.75 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#00d084" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-    </svg>
-
     <div class="up-view-body container position-relative">
 
         <!-- Content View -->
         <section>
-            <div class="over-shape content-view overflow-hidden position-relative">
+            <div class="over-shape content-view position-relative">
                 <div class="container position-relative">
                     <div class="row position-relative">
                         <div class="col-md-6 col-sm-12">
                             <div class="shape-anime position-relative">
                                 <div class="overflow-hidden">
-                                    <img src="./images/05.png" alt="" class="position-relative">
+                                    <img src="./images/05.png" alt="" class="position-relative" data-aos="fade-up" data-aos-duration="2000">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 position-relative overflow-hidden">
                             <div class="info-title">
-                                <div class="info-me">
-                                    <h1 class="me"></h1>
-                                    <h1 class="myName colorMain"></h1>
+                                <div class="overflow-hidden">
+                                    <div class="info-me" data-aos="fade-left" data-aos-duration="1500">
+                                        <h1 class="me"></h1>
+                                        <h1 class="myName colorMain"></h1>
+                                    </div>
                                 </div>
-                                <h2 class="myWork"></h2>
-                                <p class="desMe"></p>
-                                <a class="downloadCV btn-button btnBorder" href="./images/AbdelwahabNayer-FrontEnd.pdf" download="AbdelwahabNayer-FrontEnd.pdf"></a>
+                                <div class="overflow-hidden">
+                                    <h2 class="myWork" data-aos="fade-up" data-aos-duration="1700"></h2>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="desMe" data-aos="fade-up" data-aos-duration="1800"></p>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <a class="downloadCV btn-button btnMain" data-aos="fade-up" data-aos-duration="1900" href="./images/AbdelwahabNayer-FrontEnd.pdf" download="AbdelwahabNayer-FrontEnd.pdf"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -136,9 +138,9 @@
 
         <!-- Section About Me -->
         <section class="section-about-me" id="About">
-            <div class="container">
-                <div class="bgSection head-title">
-                    <h4 class="about"></h4>
+            <div class="container bgSection">
+                <div class="bgToggle head-title">
+                    <h4 class="about colorMain"></h4>
                 </div>
 
                 <div class="row">
@@ -146,13 +148,13 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="img-about-me">
                             <img src="./images/shape.png" alt="">
-                            <img src="./images/03.png" alt="">
+                            <img src="./images/03.png" alt="" data-aos="fade-left" data-aos-duration="1500">
                         </div>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                         <div class="desc-about-me">
-                            <ul>
+                            <ul data-aos="fade-right" data-aos-duration="1500">
                                 <li class="part1"></li>
                                 <li class="part2"></li>
                                 <li class="part3"></li>
@@ -183,7 +185,7 @@
         <section class="section-project" id="Project">
             <div class="container">
                 <div class="bgSection head-title">
-                    <h4 class="project"></h4>
+                    <h4 class="project colorMain"></h4>
                 </div>
                 <div id="sliderProject" class="row sliderProject">
 

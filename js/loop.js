@@ -236,12 +236,10 @@ $(document).ready(function () {
                 </div>
                 <h4>${experience.job}</h4>
                 <h5 class="colorMain">${experience.company}</h5>
-                <div class="dataTime">
-                    <p>
-                        <span class="icon-map colorMain"></span>
-                        <strong>${experience.location}</strong>
-                    </p>
-                </div>
+                <p>
+                    <span class="icon-map colorMain"></span>
+                    <strong>${experience.location}</strong>
+                </p>
                 <p>${experience.dis}</p>
             </div>
         </div>

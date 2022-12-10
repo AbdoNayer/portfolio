@@ -43,25 +43,7 @@ html[theme=dark] {
         }
     }
 
-    // BTN
-    .btnSecond{
-        background: $mainColor !important;
-        color: $whiteColor !important;
-        border: 1px solid $mainColor !important;
-    }
-    .btnBorder{
-        background: transparent !important;
-        color: $whiteColor !important;
-        border: 1px solid $whiteColor !important;
-    }
-    .btn-button{
-        &:before{
-          background-color: $secondColor;
-        }
-        &::after{
-          background-color: $secondColor;
-        }
-    }
+    // Owl
     .owl-switch {
         .owl-nav{
             button{
