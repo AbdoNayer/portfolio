@@ -88,22 +88,25 @@
         </div>
     </header>
 
-    <div class="up-view-body container position-relative">
+    <div class="up-view-body container position-relative overflow-hidden">
 
         <!-- Content View -->
         <section>
-            <div class="over-shape content-view position-relative">
+            <div class="over-shape content-view position-relative ">
                 <div class="container position-relative">
                     <div class="row position-relative">
                         <div class="col-md-6 col-sm-12">
                             <div class="shape-anime position-relative">
                                 <div class="overflow-hidden">
-                                    <img src="./images/05.png" alt="" class="position-relative" data-aos="fade-up" data-aos-duration="2000">
+                                    <div id="framer"></div>
+                                    <div class="position-relative img-head" data-aos="fade-up" data-aos-duration="2000">
+                                        <img src="./images/05.png" class="position-relative" id="img-user" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 position-relative overflow-hidden">
-                            <div class="info-title">
+                            <div class="info-title" id="info-title">
                                 <div class="overflow-hidden">
                                     <div class="info-me" data-aos="fade-left" data-aos-duration="1500">
                                         <h1 class="me"></h1>
@@ -132,7 +135,7 @@
                 <div class="bgToggle head-title">
                     <h4 class="experience colorMain"></h4>
                 </div>
-                <div id="sliderExperience" class="owl-carousel owl-theme sliderExperience owl-switch"></div>
+                <div id="sliderExperience" class="row"></div>
             </div>
         </section>
 
@@ -146,14 +149,14 @@
                 <div class="row">
 
                     <div class="col-md-6 col-sm-12">
-                        <div class="img-about-me">
+                        <div class="img-about-me overflow-hidden">
                             <img src="./images/shape.png" alt="">
                             <img src="./images/03.png" alt="" data-aos="fade-left" data-aos-duration="1500">
                         </div>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <div class="desc-about-me">
+                        <div class="desc-about-me overflow-hidden">
                             <ul data-aos="fade-right" data-aos-duration="1500">
                                 <li class="part1"></li>
                                 <li class="part2"></li>

@@ -153,27 +153,35 @@ const itemSkills = [
 // Items Experience
 const itemExperience = [
     {
+        time        : '1000',
         job         : 'UI Developer',
         company     : 'Awamer Alshabaka',
         location    : 'Egypt, Mansoura',
+        date        : '02/2016 - 04/2021',
         dis         : 'UI Developer with 6 years of experience designing, developing, and managing complex websites, internal frameworks and responsive design.'
     },
     {
+        time        : '1400',
         job         : 'Ionic & React Native',
         company     : 'Awamer Alshabaka',
         location    : 'Egypt, Mansoura',
+        date        : '07/2019 - 04/2021',
         dis         : 'Then I developed myself and learned a lot of skills, including ( Ionic 3 & React Native ) And I Worked As Ionic 3 For 1 years, And React Native For 2 years of experience.'
     },
     {
+        time        : '1800',
         job         : 'Senior Ui Developer',
         company     : 'SDS',
         location    : 'Saudi. Arabia',
+        date        : '12/2019 - 06/2021',
         dis         : 'UI Developer part time ( remotely ) of experience designing, developing, and managing complex websites , internal frameworks and responsive design.'
     },
     {
+        time        : '2200',
         job         : 'Senior Ui Developer',
         company     : 'GET Group Holdings Ltd',
         location    : 'Cairo, Egypt',
+        date        : '07/2021 - Ongoing',
         dis         : 'Senior UI Developer freelancer of experience designing, developing, and managing complex websites , internal frameworks and responsive design.'
     },
 ];
@@ -192,11 +200,11 @@ $(document).ready(function () {
     // Image Projects
     arrImg.forEach(function(image) {
         let inItemImg = `
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-12 overflow-hidden">
                 
-                <a href=${image.url} data-fancybox="watermrk" data-caption="caption" class="img-project position-relative overflow-hidden">
+                <a data-aos="fade-up" data-aos-duration="1500" target="_blank" class="img-project position-relative overflow-hidden" href=${image.url}>
                     <main class="position-relative">    
-                        <img loading="lazy" src=${image.img} />
+                        <img src=${image.img} />
                     </main>
                 </a>
 
@@ -229,17 +237,14 @@ $(document).ready(function () {
     // Items Skills
     itemExperience.forEach(function(experience) {
         let inItemExperience = `
-        <div class="item">
-            <div class="block-experience">
-                <div class="icon-head bgSection">
-                    <img src="./images/briefcase.png" alt="">
+        <div class="item col-md-6 col-sm-12 overflow-hidden">
+            <div class="block-experience" data-aos="fade-up" data-aos-duration=${experience.time}>
+                <div class="head-exp">
+                    <h4>${experience.job}</h4>
+                    <span>${experience.date}</span>
                 </div>
-                <h4>${experience.job}</h4>
                 <h5 class="colorMain">${experience.company}</h5>
-                <p>
-                    <span class="icon-map colorMain"></span>
-                    <strong>${experience.location}</strong>
-                </p>
+                <strong>${experience.location}</strong>
                 <p>${experience.dis}</p>
             </div>
         </div>

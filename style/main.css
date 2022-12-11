@@ -22,7 +22,7 @@ button {
   font-size: 15px;
 }
 .btn-button:hover {
-  transform: scale(0.9);
+  transform: scale(0.5);
 }
 
 @-webkit-keyframes slideDown {
@@ -416,12 +416,6 @@ html[theme=dark] .theme button i {
 html[theme=dark] header .head-nav {
   background-color: #363636;
 }
-html[theme=dark] header .head-nav .logo {
-  -webkit-text-stroke: 1px #FFF;
-}
-html[theme=dark] header .head-nav .logo:before {
-  color: #FFF;
-}
 html[theme=dark] header .head-nav nav {
   background-color: #363636;
 }
@@ -430,6 +424,9 @@ html[theme=dark] header .head-nav nav li a {
 }
 html[theme=dark] header .head-nav nav li::after {
   background-color: #FFF;
+}
+html[theme=dark] .content-view .shape-anime #framer {
+  background-color: rgb(64, 64, 64);
 }
 html[theme=dark] .count-section .bgSection .count-box .svg-box svg circle {
   stroke: rgb(64, 64, 64);
@@ -513,12 +510,6 @@ html[theme=light] .theme button i {
 html[theme=light] header .head-nav {
   background-color: #FFF;
 }
-html[theme=light] header .head-nav .logo {
-  -webkit-text-stroke: 1px #00D084;
-}
-html[theme=light] header .head-nav .logo:before {
-  color: #00D084;
-}
 html[theme=light] header .head-nav nav {
   background-color: #FFF;
 }
@@ -527,6 +518,9 @@ html[theme=light] header .head-nav nav li a {
 }
 html[theme=light] header .head-nav nav li::after {
   background-color: #00D084;
+}
+html[theme=light] .content-view .shape-anime #framer {
+  background-color: rgba(242, 251, 252, 0.9);
 }
 html[theme=light] .count-section .bgSection .count-box .svg-box svg circle {
   stroke: rgba(242, 251, 252, 0.9);
@@ -566,7 +560,6 @@ body {
   padding: 0;
   overflow-x: hidden !important;
   font-family: "Cairo", sans-serif;
-  scroll-behavior: smooth;
 }
 
 a, button, input, textarea, i {
@@ -802,7 +795,7 @@ li {
   flex-wrap: initial;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 50px;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 .block-media .social li a {
   display: flex;
@@ -810,17 +803,17 @@ li {
   justify-content: center;
   flex-direction: row;
   flex-wrap: initial;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: #FFF;
-  margin: 5px 10px;
+  margin: 5px;
   border-radius: 5px;
   color: #00D084;
   overflow: hidden;
   position: relative;
 }
 .block-media .social li a i {
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.2s linear;
 }
 .block-media .social li a:hover i {
@@ -927,9 +920,11 @@ header .head-nav .logo {
   color: transparent;
   position: relative;
   margin: 0;
+  -webkit-text-stroke: 1px #00D084;
 }
 header .head-nav .logo:before {
   content: "PRO CODE";
+  color: #00D084;
   text-align: center;
   -webkit-animation: animate44 4s ease-in-out infinite;
           animation: animate44 4s ease-in-out infinite;
@@ -1022,6 +1017,8 @@ header.header-fixed {
   flex-wrap: initial;
   height: 100%;
   overflow: hidden;
+  position: relative;
+  transition: 0.2s;
 }
 .content-view .info-title .info-me {
   display: flex;
@@ -1046,7 +1043,7 @@ header.header-fixed {
 .content-view .shape-anime {
   text-align: center;
 }
-.content-view .shape-anime::after {
+.content-view .shape-anime #framer {
   content: "";
   width: 400px;
   height: 400px;
@@ -1059,87 +1056,69 @@ header.header-fixed {
   right: 0;
   margin: auto;
   background-color: rgba(242, 251, 252, 0.9);
+  z-index: 8;
+  transition: 0.2s;
 }
-.content-view .shape-anime img {
-  max-width: 100%;
+.content-view .shape-anime .img-head {
   z-index: 99;
 }
-
-.section-experience {
-  padding-top: 100px;
+.content-view .shape-anime .img-head img {
+  max-width: 100%;
+  transition: 0.2s;
 }
+
 .section-experience .bgSection {
   border-radius: 20px;
 }
-.section-experience .block-experience {
-  border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 4px 0px;
-  text-align: center;
-  padding: 20px;
-  margin: 35px auto;
-  max-width: 60%;
-  padding-top: 100px;
+.section-experience #sliderExperience {
+  direction: ltr;
+  padding-bottom: 50px;
 }
-.section-experience .block-experience .icon-head {
+.section-experience .item .block-experience {
+  direction: ltr;
+  border-left: 5px solid #00D084;
+  padding: 10px 15px;
+  margin: 15px auto;
+  max-width: 95%;
+  border-radius: 10px;
+}
+.section-experience .item .block-experience .head-exp {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: initial;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  position: absolute;
-  top: -25px;
-  bottom: initial;
-  transform: initial;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
-.section-experience .block-experience .icon-head::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  position: absolute;
-  top: initial;
-  bottom: -1px;
-  transform: rotate(-34deg);
-  left: initial;
-  right: 20px;
-  margin: auto;
-}
-.section-experience .block-experience .icon-head::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  position: absolute;
-  top: initial;
-  bottom: -1px;
-  transform: rotate(34deg);
-  left: 20px;
-  right: initial;
-  margin: auto;
-}
-.section-experience .block-experience .icon-head img {
-  max-width: 80px;
-}
-.section-experience .block-experience h4 {
+.section-experience .item .block-experience .head-exp h4 {
   font-size: 20px;
+  margin: 0;
 }
-.section-experience .block-experience h5 {
+.section-experience .item .block-experience .head-exp span {
+  font-size: 13px;
+  color: #666;
+}
+.section-experience .item .block-experience h5 {
   font-size: 15px;
 }
-.section-experience .block-experience p strong {
-  margin: 0 5px;
-}
-.section-experience .block-experience p {
+.section-experience .item .block-experience p {
   font-size: 14px;
+}
+.section-experience .item .block-experience h4, .section-experience .item .block-experience h5, .section-experience .item .block-experience p, .section-experience .item .block-experience strong {
+  position: relative;
+  padding: 0 20px;
+}
+.section-experience .item .block-experience h4::after, .section-experience .item .block-experience h5::after, .section-experience .item .block-experience p::after, .section-experience .item .block-experience strong::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%) rotate(45deg);
+  left: 0px;
+  right: initial;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  background-color: #00D084;
 }
 
 .section-about-me {
@@ -1148,6 +1127,7 @@ header.header-fixed {
 }
 .section-about-me .desc-about-me {
   margin: 20px 0;
+  padding: 0 20px;
 }
 .section-about-me .desc-about-me ul {
   position: relative;
@@ -1168,7 +1148,7 @@ header.header-fixed {
 .section-about-me .desc-about-me ul li {
   margin: 20px 0;
   position: relative;
-  padding: 0 40px;
+  padding: 0 30px;
   display: block;
 }
 .section-about-me .desc-about-me ul li::after {
@@ -1183,6 +1163,19 @@ header.header-fixed {
   width: 10px;
   height: 10px;
   background-color: #00D084;
+}
+.section-about-me .desc-about-me ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: initial;
+  transform: translateY(-50%);
+  left: initial;
+  right: initial;
+  margin: auto;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #00D084;
 }
 .section-about-me .desc-about-me ul li span {
   font-weight: bold;
@@ -1288,12 +1281,13 @@ header.header-fixed {
   height: 100%;
 }
 
-section {
+.up-view-body section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: initial;
+  padding-top: 100px;
 }
 
 @media (min-width: 320px) {
@@ -1542,6 +1536,9 @@ html[dir=ltr] .section-about-me .desc-about-me ul::after {
 html[dir=ltr] .section-about-me .desc-about-me ul li::after {
   left: 0;
 }
+html[dir=ltr] .section-about-me .desc-about-me ul li::before {
+  left: -1.9px;
+}
 @media (max-width: 1060px) {
   html[dir=ltr] header .head-nav nav {
     position: fixed;
@@ -1584,6 +1581,9 @@ html[dir=rtl] .section-about-me .desc-about-me ul::after {
 }
 html[dir=rtl] .section-about-me .desc-about-me ul li::after {
   right: 0;
+}
+html[dir=rtl] .section-about-me .desc-about-me ul li::before {
+  right: -1.9px;
 }
 @media (max-width: 1060px) {
   html[dir=rtl] header .head-nav nav {

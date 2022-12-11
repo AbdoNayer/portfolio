@@ -25,6 +25,9 @@ html[dir=ltr] {
                     &::after{
                         left: 0;
                     }
+                    &::before{
+                        left: -1.9px;
+                    }
                 }
             }
         }
@@ -80,6 +83,9 @@ html[dir=rtl] {
                 li{
                     &::after{
                         right: 0;
+                    }
+                    &::before{
+                        right: -1.9px;
                     }
                 }
             }

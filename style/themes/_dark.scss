@@ -77,12 +77,6 @@ html[theme=dark] {
     header{
         .head-nav{
             background-color: $secondColor;
-            .logo{
-                -webkit-text-stroke: 1px $whiteColor;
-                &:before{
-                    color: $whiteColor;
-                }
-            }
             nav{
                 background-color: $secondColor;
                 li{
@@ -93,6 +87,15 @@ html[theme=dark] {
                         background-color: $whiteColor;
                     }
                 }
+            }
+        }
+    }
+
+    // Content View
+    .content-view{
+        .shape-anime{
+            #framer{
+                background-color: $bgDarkColor;
             }
         }
     }

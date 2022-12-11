@@ -94,21 +94,6 @@ $(document).ready(function () {
     $(function() {
         $.scrollify({
             section : "section",
-            sectionName : "section-name",
-            interstitialSection : "",
-            easing: "easeOutExpo",
-            scrollSpeed: 1100,
-            offset : 0,
-            scrollbars: true,
-            standardScrollElements: "",
-            setHeights: true,
-            overflowScroll: true,
-            updateHash: true,
-            touchScroll:true,
-            before:function() {},
-            after:function() {},
-            afterResize:function() {},
-            afterRender:function() {}
         });
     });
 
@@ -172,35 +157,6 @@ $(document).ready(function () {
         }
     });
 
-    // Slider Experience
-    $('#sliderExperience').owlCarousel({
-        loop:true,
-        margin:5,
-        center:true,
-        autoplay:true,
-        autoplayTimeout: 9000,
-        smartSpeed: 1000,
-        animateOut: 'fadeOut',
-        dragEndSpeed: 3000,
-        pagination : false,
-        nav:true,
-        navText: [
-            '<i class="icon-arrow"></i>',
-            '<i class="icon-arrow"></i>'
-        ],
-        responsive:{
-            0:{
-                items:1
-            },
-            900:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    });
-
     // Slider Skills
     $('#sliderSkills').owlCarousel({
         loop:true,
@@ -232,13 +188,17 @@ $(document).ready(function () {
 
 });
 
-// window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', ()=>{
 
-//     let val     = window.scrollY;
-//     let item    = document.getElementById('framer');
+    let val                 = window.scrollY;
+    let itemImg             = document.getElementById('framer');
+    let imgUser             = document.getElementById('img-user');
+    let infoTitle           = document.getElementById('info-title');
 
-//     item.style.left = val * -2 + 'px';
+    itemImg.style.left          = val * -1 + 'px';
+    imgUser.style.left          = val * 1 + 'px';
+    infoTitle.style.left        = val * 1 + 'px';
 
-// });
+});
 
 
